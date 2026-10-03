@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.next-farm/
+out/
+.sites-runtime/
+.openai/
+.env*
+*.tsbuildinfo
+farm-diet/data/raw/
