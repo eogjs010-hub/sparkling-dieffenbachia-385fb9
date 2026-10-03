@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:I[7681,["500","static/chunks/500-b13bb91f5a6311b6.js","192","static/chunks/192-cc5211a287d82dea.js","300","static/chunks/300-6df39cf510f4cf9f.js","210","static/chunks/app/diagnose/simple/page-bdf92427d6b07e58.js"],"default"]
+3:I[484,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[484,[],"ViewportBoundary"]
+9:I[484,[],"MetadataBoundary"]
+a:I[6869,[],"IconMark"]
+c:I[7121,[],""]
+d:I[4581,[],""]
+11:I[8500,["500","static/chunks/500-b13bb91f5a6311b6.js","974","static/chunks/app/page-f1402cf2df2f7d2b.js"],""]
+12:I[8962,["500","static/chunks/500-b13bb91f5a6311b6.js","177","static/chunks/app/layout-0c298eaf19363bd1.js"],"SessionProvider"]
+:HL["/_next/static/css/27b635981caa658e.css","style"]
+7:X
+f:X
+f:C
+0:{"buildId":"c0iKG4mo_xgonspkj0irZ","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"mode":"simple"}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"팜 다이어트 · Farm Diet"}],["$","meta","1",{"name":"description","content":"실제 농산물소득조사 기반, 300평 기준 농가 비용 진단"}],["$","link","2",{"rel":"icon","href":"/favicon.svg"}],["$","$La","3",{}]]}]}]}],null]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@e","staleTime":"$7","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[null,["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}]}]]}],"isPartial":"$@10","staleTime":"$7","varyParams":"$f"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/27b635981caa658e.css","precedence":"next"}]],["$","html",null,{"lang":"ko","children":["$","body",null,{"children":[["$","a",null,{"className":"skip-link","href":"#main","children":"본문으로 이동"}],["$","header",null,{"className":"site-header","children":["$","div",null,{"className":"header-inner","children":[["$","$L11",null,{"href":"/","className":"brand","aria-label":"팜 다이어트 홈","children":[["$","span",null,{"className":"brand-icon","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":25,"height":25,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-sprout","children":[["$","path","e6iznv",{"d":"M7 20h10"}],["$","path","161w41",{"d":"M10 20c5.5-2.5.8-6.4 3-10"}],["$","path","9gtqwd",{"d":"M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"}],["$","path","bkxnd2",{"d":"M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"}],"$undefined"]}]}],["$","span",null,{"children":["팜 다이어트",["$","small",null,{"children":"FARM DIET"}]]}]]}],["$","span",null,{"className":"header-tag","children":"농장의 숫자를, 더 건강하게."}],["$","span",null,{"className":"year-label","children":"2024 조사 데이터"}]]}]}],["$","$L12",null,{"children":["$","$Lc",null,{"parallelRouterKey":"children","template":["$","$Ld",null,{}],"notFound":[["$","main",null,{"id":"main","className":"shell empty-state","children":[["$","h1",null,{"children":"페이지를 찾을 수 없습니다."}],["$","p",null,{"children":"팜 다이어트 홈에서 진단을 시작해주세요."}],["$","$L11",null,{"href":"/","className":"primary-button","children":"홈으로 이동"}]]}],[]]}]}],["$","footer",null,{"className":"site-footer","children":[["$","span",null,{"children":"Farm Diet · 300평 기준 경영 진단"}],["$","span",null,{"children":"입력한 농장 정보는 서버에 저장하지 않습니다."}]]}]]}]}]]}],"isPartial":"$@13","staleTime":"$7","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
+5:null
+7:300
+15:true
+7:C
+14:0
+b:"$undefined"
+e:"$undefined"
+10:"$undefined"
+13:"$undefined"
+6:"$undefined"
