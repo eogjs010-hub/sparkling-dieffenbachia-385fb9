@@ -20,6 +20,24 @@ async function click(text:string){const button=[...container.querySelectorAll('b
 async function submit(){await act(async()=>container.querySelector('form')!.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));}
 function Journey({mode}:{mode:Mode}){const[done,setDone]=useState(false);router.push.mockImplementation(()=>setDone(true));return <SessionProvider>{done?<Results mode={mode}/>:<DiagnosisForm mode={mode}/>}</SessionProvider>;}
 describe('사용자 입력과 결과 흐름',()=>{
+ it.each(['simple','precision'] as const)('%s 모드에서 2015년을 선택하면 해당 연도 예시·작목·결과를 사용한다',async mode=>{
+  await mount(<Journey mode={mode}/>);
+  const year=container.querySelector<HTMLSelectElement>('#year')!;
+  expect(year.options).toHaveLength(10);
+  await act(async()=>{year.value='2015';year.dispatchEvent(new Event('change',{bubbles:true}));});
+  expect(container.querySelector<HTMLSelectElement>('#crop')!.value).toBe('시설토마토(반촉성)');
+  await click('예시로');await submit();
+  expect(container.querySelector('.benchmark-bar')?.textContent).toContain('2015년 전국 시설토마토(반촉성)');
+  expect(container.textContent).toContain('농가 식별번호가 반복');
+ });
+ it('연도 변경 시 이전 연도의 예시 금액을 지운다',async()=>{
+  await mount(<Journey mode="precision"/>);await click('예시로');
+  const year=container.querySelector<HTMLSelectElement>('#year')!;
+  await act(async()=>{year.value='2016';year.dispatchEvent(new Event('change',{bubbles:true}));});
+  expect(container.querySelector<HTMLInputElement>('#revenue')!.value).toBe('');
+  expect(container.querySelector<HTMLInputElement>('#cost-energy')!.value).toBe('');
+ });
+
  it('빈 면적을 제출하면 안내하고 결과로 이동하지 않는다',async()=>{await mount(<Journey mode="simple"/>);await submit();expect(container.querySelector('[role="alert"]')?.textContent).toContain('재배면적');expect(router.push).not.toHaveBeenCalled();});
  it('간편 예시를 제출하면 두 비용만 비교하고 전체 수익은 추정하지 않는다',async()=>{await mount(<Journey mode="simple"/>);await click('예시로');await submit();expect(container.querySelectorAll('.gap-card')).toHaveLength(2);expect(container.textContent).toContain('시설수박 상위 10%');expect(container.textContent).toContain('예시 입력');expect(container.querySelector('.kpi-grid')).toBeNull();expect(container.querySelector('.simulator')).toBeNull();});
  it('간편 선택에서 같은 항목은 중복 선택할 수 없다',async()=>{await mount(<Journey mode="simple"/>);const first=container.querySelector<HTMLSelectElement>('#category-first')!;expect(first.querySelector<HTMLOptionElement>('option[value="labor"]')?.disabled).toBe(true);});

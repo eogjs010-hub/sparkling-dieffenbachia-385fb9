@@ -11,6 +11,10 @@ export const CATEGORIES = [
 ] as const;
 export type CategoryKey = typeof CATEGORIES[number]['key'];
 export type Costs = Record<CategoryKey, number>;
+export function categoriesForYear(year: number) {
+  if (!Number.isInteger(year) || year < 2015 || year > 2024) throw new Error('지원하지 않는 조사연도입니다.');
+  return CATEGORIES.map(c => ({ ...c, fields: year <= 2016 && c.key === 'rent' ? ['임차료_비용'] : year === 2015 && c.key === 'energy' ? ['(구)광열동력비_비용', '물(수도료)_비용'] : [...c.fields] }));
+}
 export const emptyCosts = (): Costs => Object.fromEntries(CATEGORIES.map(c => [c.key, 0])) as Costs;
 export function numeric(value: unknown): number | null {
   if (value === null || value === undefined || value === '' || typeof value === 'boolean') return null;
@@ -18,9 +22,9 @@ export function numeric(value: unknown): number | null {
   const result = typeof value === 'number' ? value : typeof value === 'string' ? Number(value.trim().replaceAll(',', '')) : NaN;
   return Number.isFinite(result) ? result : null;
 }
-export function calculateNineCategories(row: Record<string, unknown>, allowVerifiedBlank = false): Costs {
+export function calculateNineCategories(row: Record<string, unknown>, allowVerifiedBlank = false, year = 2024): Costs {
   const result = emptyCosts();
-  for (const c of CATEGORIES) for (const field of c.fields) {
+  for (const c of categoriesForYear(year)) for (const field of c.fields) {
     const v = numeric(row[field]);
     if (v === null && row[field] !== null && row[field] !== undefined && row[field] !== '') throw new Error(`숫자 변환 불가: ${field}`);
     if (v === null && !allowVerifiedBlank) throw new Error(`비용 누락: ${field}`);
@@ -72,7 +76,7 @@ export type Benchmark = { crop: string; region: string; cohortSize: number; top1
 export type CropBenchmark = { crop: string; national: Benchmark; regions: Record<string, Benchmark> };
 export type BenchmarkData = {
   year: number; baseAreaPyeong: number; minCohortSize: number; regions: string[]; crops: CropBenchmark[];
-  quality: { rawRows: number; validRows: number; excludedRows: number; uniqueFarmCount: number; cropCount: number; blankCostCellsVerifiedAsZero: number; exclusions: { row: number; reason: string }[]; policy: string[] };
+  quality: { rawRows: number; validRows: number; excludedRows: number; uniqueFarmCount: number | null; cropCount: number; blankCostCellsVerifiedAsZero: number; exclusions: { row: number; reason: string }[]; policy: string[] };
 };
 export function resolveBenchmark(crop: CropBenchmark, region: string) {
   const regional = crop.regions[region];

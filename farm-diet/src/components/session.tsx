@@ -1,10 +1,11 @@
 'use client';
 import { createContext, useContext, useState } from 'react';
+import { LATEST_YEAR } from '@/lib/benchmarks';
 import { emptyCosts, type CategoryKey, type Costs } from '@/lib/farm';
 export type Mode = 'simple' | 'precision';
-export type Draft = { crop: string; region: string; area: string; revenue: string; first: CategoryKey; second: CategoryKey; costs: Record<CategoryKey,string>; sample: boolean };
-export type Diagnosis = { mode: Mode; crop: string; region: string; area: number; revenue: number; costs: Costs; selected: CategoryKey[]; sample: boolean };
-const newDraft = (): Draft => ({ crop: '시설수박', region: '전국', area: '', revenue: '', first: 'energy', second: 'labor', costs: Object.fromEntries(Object.keys(emptyCosts()).map(k=>[k,''])) as Draft['costs'], sample: false });
+export type Draft = { year: number; crop: string; region: string; area: string; revenue: string; first: CategoryKey; second: CategoryKey; costs: Record<CategoryKey,string>; sample: boolean };
+export type Diagnosis = { mode: Mode; year: number; crop: string; region: string; area: number; revenue: number; costs: Costs; selected: CategoryKey[]; sample: boolean };
+const newDraft = (): Draft => ({ year: LATEST_YEAR, crop: '시설수박', region: '전국', area: '', revenue: '', first: 'energy', second: 'labor', costs: Object.fromEntries(Object.keys(emptyCosts()).map(k=>[k,''])) as Draft['costs'], sample: false });
 type Session = { drafts: Record<Mode,Draft>; updateDraft: (mode: Mode,draft: Draft)=>void; diagnoses: Partial<Record<Mode,Diagnosis>>; save: (value:Diagnosis)=>void };
 const Context = createContext<Session|null>(null);
 export function SessionProvider({children}:{children:React.ReactNode}) {

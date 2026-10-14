@@ -28,6 +28,6 @@ git commit -m "Update Farm Diet"
 git push origin main
 ```
 
-`git add`는 저장소 최상위에서 실행합니다. 원본 Excel·환경변수 파일·의존성·빌드 캐시는 GitHub에 올리지 않습니다. 배포는 `src/data/benchmark-2024.json`을 사용하며 Excel 재전처리를 하지 않습니다.
+`git add`는 저장소 최상위에서 실행합니다. 원본 Excel·환경변수 파일·의존성·빌드 캐시는 GitHub에 올리지 않습니다. 배포는 `src/data/benchmark-2015-2024.json`을 사용하며 Excel 재전처리를 하지 않습니다. 입력 화면에서 2015~2024년을 선택할 수 있습니다.
 
 데이터를 변경하려면 원본을 로컬 `farm-diet/data/raw/`에 준비한 뒤 `npm run data:build`를 실행하고 생성된 JSON 변경을 commit합니다. 자세한 데이터 처리와 한계는 `farm-diet/README.md`, `farm-diet/VALIDATION.md`에 있습니다.
