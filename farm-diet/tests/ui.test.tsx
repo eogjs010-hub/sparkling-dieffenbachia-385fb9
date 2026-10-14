@@ -7,9 +7,11 @@ import DiagnosisForm from '../src/components/diagnosis-form';
 import Results from '../src/components/results';
 import Simulator from '../src/components/simulator';
 import {emptyCosts} from '../src/lib/farm';
+import AreaInput from '../src/components/area-input';
+import ReadAloud from '../src/components/read-aloud';
 import AccessibilityControls from '../src/components/accessibility-controls';
 const router=vi.hoisted(()=>({push:vi.fn()}));
-vi.mock('next/navigation',()=>({useRouter:()=>router}));
+vi.mock('next/navigation',()=>({useRouter:()=>router,useSearchParams:()=>new URLSearchParams()}));
 vi.mock('next/link',()=>({default:({children,href,...props}:{children:React.ReactNode;href:string})=><a href={href} {...props}>{children}</a>}));
 // Chart layout requires a real browser; these tests focus on form and state behavior.
 vi.mock('../src/components/cost-radar',()=>({default:()=> <div>레이더 영역</div>}));
@@ -19,11 +21,11 @@ beforeEach(()=>{(globalThis as typeof globalThis&{IS_REACT_ACT_ENVIRONMENT?:bool
 afterEach(async()=>{await act(async()=>root.unmount());container.remove();delete (document as Document&{modelContext?:unknown}).modelContext;});
 async function mount(node:React.ReactNode){await act(async()=>root.render(node));}
 async function click(text:string){const button=[...container.querySelectorAll('button')].find(b=>b.textContent?.includes(text));expect(button).toBeTruthy();await act(async()=>button!.click());}
-async function submit(){await act(async()=>container.querySelector('form')!.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));}
+async function submit(){if(container.querySelector('.simple-wizard')&&container.querySelector<HTMLInputElement>('#area')?.value!==''&&!container.querySelector('[role="alert"]')){while(!container.querySelector('.review-list')){const before=container.querySelector('.wizard-progress')!.textContent;await act(async()=>container.querySelector('form')!.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));if(container.querySelector('.wizard-progress')!.textContent===before)break;}}await act(async()=>container.querySelector('form')!.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));}
 function Journey({mode}:{mode:Mode}){const[done,setDone]=useState(false);router.push.mockImplementation(()=>setDone(true));return <SessionProvider>{done?<Results mode={mode}/>:<DiagnosisForm mode={mode}/>}</SessionProvider>;}
 describe('사용자 입력과 결과 흐름',()=>{
  it('퀵 버튼은 만원 표시와 한글 금액을 갱신하고 단위 전환 때 금액을 보존한다',async()=>{
-  await mount(<Journey mode="simple"/>);
+  await mount(<Journey mode="precision"/>);
   expect(container.querySelector<HTMLSelectElement>('#money-unit')!.value).toBe('manwon');
   const quick=container.querySelector<HTMLButtonElement>('button[aria-label="해당 작목 연간 매출에 100만 원 더하기"]')!;
   await act(async()=>quick.click());
@@ -69,10 +71,20 @@ describe('사용자 입력과 결과 흐름',()=>{
   expect(container.querySelector<HTMLInputElement>('#cost-energy')!.value).toBe('');
  });
 
- it('빈 면적을 제출하면 안내하고 결과로 이동하지 않는다',async()=>{await mount(<Journey mode="simple"/>);await submit();expect(container.querySelector('[role="alert"]')?.textContent).toContain('재배면적');expect(router.push).not.toHaveBeenCalled();});
- it('간편 예시를 제출하면 두 비용만 비교하고 전체 수익은 추정하지 않는다',async()=>{await mount(<Journey mode="simple"/>);await click('예시로');await submit();expect(container.querySelectorAll('.gap-card')).toHaveLength(2);expect(container.textContent).toContain('시설수박 상위 10%');expect(container.textContent).toContain('예시 입력');expect(container.querySelector('.kpi-grid')).toBeNull();expect(container.querySelector('.simulator')).toBeNull();});
- it('간편 선택에서 같은 항목은 중복 선택할 수 없다',async()=>{await mount(<Journey mode="simple"/>);const first=container.querySelector<HTMLSelectElement>('#category-first')!;expect(first.querySelector<HTMLOptionElement>('option[value="labor"]')?.disabled).toBe(true);});
+ it('빈 면적을 제출하면 안내하고 결과로 이동하지 않는다',async()=>{await mount(<Journey mode="simple"/>);await click('다음');await click('다음');expect(container.querySelector('[role="alert"]')?.textContent).toContain('재배면적');expect(router.push).not.toHaveBeenCalled();});
+ it('간편 예시를 제출하면 두 비용만 비교하고 전체 수익은 추정하지 않는다',async()=>{await mount(<Journey mode="simple"/>);await click('예시로');await submit();expect(container.querySelectorAll('.gap-card')).toHaveLength(2);expect(container.textContent).toContain('시설수박 상위 10%');expect(container.textContent).toContain('예시');expect(container.querySelector('.kpi-grid')).toBeNull();expect(container.querySelector('.simulator')).toBeNull();});
+ it('간편 선택에서 같은 항목은 중복 선택할 수 없다',async()=>{await mount(<Journey mode="simple"/>);await click('예시로');await click('다음');await click('다음');await click('다음');const first=container.querySelector<HTMLSelectElement>('#category-first')!;expect(first.querySelector<HTMLOptionElement>('option[value="labor"]')?.disabled).toBe(true);});
  it('정밀 예시는 9개 비교 행과 9개 슬라이더를 표시하고 임차료 0을 처리한다',async()=>{await mount(<Journey mode="precision"/>);await click('예시로');await submit();expect(container.querySelectorAll('[data-testid="gap-table"] tbody tr')).toHaveLength(9);expect(container.querySelectorAll('input[type="range"]')).toHaveLength(9);const rent=[...container.querySelectorAll('[data-testid="gap-table"] tbody tr')].find(r=>r.textContent?.startsWith('임차료'))!;expect(rent.textContent).toContain('비교 어려움');expect(container.textContent).not.toContain('Infinity');expect(container.textContent).toContain('9대 비용 기준 추정 잔여액');});
+ it('정밀 항목 삭제 후 다시 추가하면 금액이 유지되고 제외한 항목은 결과와 시뮬레이션에서 빠진다',async()=>{
+  await mount(<Journey mode="precision"/>);await click('예시로');const prior=container.querySelector<HTMLInputElement>('#cost-energy')!.value;
+  const remove=container.querySelector<HTMLButtonElement>('button[aria-label="수도광열비 항목 삭제"]')!;await act(async()=>remove.click());expect(container.querySelector('#cost-energy')).toBeNull();await click('항목 다시 추가 · 수도광열비');expect(container.querySelector<HTMLInputElement>('#cost-energy')!.value).toBe(prior);await act(async()=>container.querySelector<HTMLButtonElement>('button[aria-label="수도광열비 항목 삭제"]')!.click());await submit();expect(container.querySelectorAll('[data-testid="gap-table"] tbody tr')).toHaveLength(8);expect(container.querySelectorAll('input[type="range"]')).toHaveLength(8);expect(container.querySelector('#slider-energy')).toBeNull();expect(container.textContent).toContain('입력한 비용 기준 잔여액');expect(container.textContent).toContain('전체 잔여액·순수익을 알 수 없습니다');
+ });
+ it('간편 단계에서 뒤로 이동해도 면적·매출을 보존한다',async()=>{
+  await mount(<Journey mode="simple"/>);await click('예시로');await click('다음');const area=container.querySelector<HTMLInputElement>('#area')!.value;await click('다음');const revenue=container.querySelector<HTMLInputElement>('#revenue')!.value;await click('이전');expect(container.querySelector<HTMLInputElement>('#area')!.value).toBe(area);await click('다음');expect(container.querySelector<HTMLInputElement>('#revenue')!.value).toBe(revenue);expect(container.querySelector('.wizard-progress')!.textContent).toContain('5단계 중 3단계');
+ });
+ it('간편 모르는 비용은 비교에서 빠지고 한 항목만 비교할 수 있다',async()=>{
+  await mount(<Journey mode="simple"/>);await click('예시로');await click('다음');await click('다음');await click('다음');await click('잘 모르겠어요');await submit();expect(container.querySelectorAll('.gap-card')).toHaveLength(1);expect(container.textContent).toContain('미입력 또는 제외한 금액은 추정하지 않습니다');
+ });
  it('직접 결과 화면을 열면 재입력 안내를 표시한다',async()=>{await mount(<SessionProvider><Results mode="precision"/></SessionProvider>);expect(container.textContent).toContain('먼저 입력');expect(container.querySelector('.simulator')).toBeNull();});
 });
 describe('시뮬레이션의 동일 상태와 WebMCP 등록',()=>{
@@ -85,4 +97,9 @@ describe('시뮬레이션의 동일 상태와 WebMCP 등록',()=>{
   expect(()=>tools.set_cost_scenario.execute({changes:{energy:-31}})).toThrow();expect(container.querySelector<HTMLInputElement>('#slider-energy')?.value).toBe('-10');
   await click('초기화');expect(container.querySelector('[data-testid="projected-balance"]')?.textContent).toBe('1,000원');
  });
+});
+
+describe('면적과 읽어주기',()=>{
+ it('평/㎡ 전환을 반복해도 원본 면적을 보존한다',async()=>{function Area(){const[value,setValue]=useState('300');return <><AreaInput value={value} onChange={setValue}/><output data-testid="pyeong">{value}</output></>;}await mount(<Area/>);const select=container.querySelector<HTMLSelectElement>('#area-unit')!;await act(async()=>{select.value='m2';select.dispatchEvent(new Event('change',{bubbles:true}));});expect(Number(container.querySelector<HTMLInputElement>('#area')!.value)).toBeCloseTo(991.7355,3);await act(async()=>{select.value='pyeong';select.dispatchEvent(new Event('change',{bubbles:true}));});expect(container.querySelector<HTMLInputElement>('#area')!.value).toBe('300');expect(container.querySelector('[data-testid="pyeong"]')!.textContent).toBe('300');});
+ it('읽어주기는 자동 재생하지 않고 사용자가 눌러야 시작·정지한다',async()=>{const speak=vi.fn(),cancel=vi.fn();vi.stubGlobal('speechSynthesis',{speak,cancel});vi.stubGlobal('SpeechSynthesisUtterance',class{lang='';rate=1;constructor(public text:string){}});await mount(<ReadAloud text="확인해주세요"/>);expect(speak).not.toHaveBeenCalled();await click('읽어주기');expect(speak).toHaveBeenCalledOnce();await click('정지');expect(cancel).toHaveBeenCalled();await act(async()=>root.render(<ReadAloud text="다음 질문"/>));expect(speak).toHaveBeenCalledOnce();vi.unstubAllGlobals();});
 });

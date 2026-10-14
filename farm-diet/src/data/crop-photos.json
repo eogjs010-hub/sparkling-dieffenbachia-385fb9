@@ -1,0 +1,74 @@
+{
+  "watermelon": {
+    "image": "/crops/watermelon.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg",
+    "author": "Fred Hsu (Wikipedia:User:Fred Hsu on en.wikipedia)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "title": "File:Taiwan 2009 Tainan City Organic Farm Watermelon FRD 7962.jpg"
+  },
+  "tomato": {
+    "image": "/crops/tomato.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Tomato_je.jpg",
+    "author": "Softeis",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "title": "File:Tomato je.jpg"
+  },
+  "strawberry": {
+    "image": "/crops/strawberry.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg",
+    "author": "\nIvar Leidus",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "File:Garden strawberry (Fragaria × ananassa) single2.jpg"
+  },
+  "cucumber": {
+    "image": "/crops/cucumber.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Cucumber_in_jaffna.JPG",
+    "author": "Maathavan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "title": "File:Cucumber in jaffna.JPG"
+  },
+  "pepper": {
+    "image": "/crops/pepper.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Capsicum_baccatum_in_Sa%C3%BAde_flea_market,_S%C3%A3o_Paulo,_Brazil.jpg",
+    "author": "Wilfredor",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "File:Capsicum baccatum in Saúde flea market, São Paulo, Brazil.jpg"
+  },
+  "paprika": {
+    "image": "/crops/paprika.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Peppers_in_water.jpg",
+    "author": "ulleo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "title": "File:Peppers in water.jpg"
+  },
+  "lettuce": {
+    "image": "/crops/lettuce.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Romaine_lettuce.jpg",
+    "author": "Rainer Zenz",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "title": "File:Romaine lettuce.jpg"
+  },
+  "melon": {
+    "image": "/crops/melon.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:A_hami_melon_for_sale_at_a_Publix_market_in_Knoxville,_Tennessee.jpg",
+    "author": "Harrison Keely",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "title": "File:A hami melon for sale at a Publix market in Knoxville, Tennessee.jpg"
+  },
+  "chamoe": {
+    "image": "/crops/chamoe.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Korean_melon-Chamoe-01.jpg",
+    "author": "hutch",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "title": "File:Korean melon-Chamoe-01.jpg"
+  }
+}
