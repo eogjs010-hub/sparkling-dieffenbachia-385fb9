@@ -69,7 +69,9 @@ function aggregate(rows: Valid[], crop: string, region: string): Benchmark {
   return { crop, region, cohortSize: rows.length, top10Count: top.length, top10Share: top.length / rows.length * 100,
     eligible: rows.length >= MIN_COHORT && top.length >= 5,
     medianRevenue: median(top.map(r => r.revenue)), medianNetProfit: median(top.map(r => r.net)), medianNetProfitRate: median(top.map(r => r.rate)), medianOmittedCosts: median(top.map(r => r.omitted)),
-    costs: Object.fromEntries(CATEGORIES.map(c => [c.key, median(top.map(r => r.costs[c.key]))])) as Costs };
+    costs: Object.fromEntries(CATEGORIES.map(c => [c.key, median(top.map(r => r.costs[c.key]))])) as Costs,
+    cohortMedianCosts: Object.fromEntries(CATEGORIES.map(c => [c.key, median(rows.map(r => r.costs[c.key]))])) as Costs,
+    cohortMedianTotalCosts: median(rows.map(r => sumCosts(r.costs))), top10MedianTotalCosts: median(top.map(r => sumCosts(r.costs))) };
 }
 const crops = [...new Set(valid.map(r => r.crop))]; const regions = [...new Set(raw.map(r => String(r.fields['도명'])))];
 const data: BenchmarkData & { provenance: object } = {

@@ -72,7 +72,7 @@ export function simulate(revenue: number, costs: Costs, changes: Costs) {
 }
 export const sumCosts = (costs: Costs) => CATEGORIES.reduce((s, c) => s + costs[c.key], 0);
 export const MIN_COHORT = 50;
-export type Benchmark = { crop: string; region: string; cohortSize: number; top10Count: number; top10Share: number; eligible: boolean; medianRevenue: number; medianNetProfit: number; medianNetProfitRate: number; medianOmittedCosts: number; costs: Costs };
+export type Benchmark = { crop: string; region: string; cohortSize: number; top10Count: number; top10Share: number; eligible: boolean; medianRevenue: number; medianNetProfit: number; medianNetProfitRate: number; medianOmittedCosts: number; costs: Costs; cohortMedianCosts?: Costs; cohortMedianTotalCosts?: number; top10MedianTotalCosts?: number };
 export type CropBenchmark = { crop: string; national: Benchmark; regions: Record<string, Benchmark> };
 export type BenchmarkData = {
   year: number; baseAreaPyeong: number; minCohortSize: number; regions: string[]; crops: CropBenchmark[];

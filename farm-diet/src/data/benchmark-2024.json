@@ -120,7 +120,20 @@
           "labor": 502734,
           "rent": 240000,
           "opportunity": 5509777
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 1402666.5,
+          "fertilizer": 688205.5,
+          "pest": 175934,
+          "energy": 584983.5,
+          "materials": 1384016,
+          "maintenance": 1408417,
+          "labor": 845000,
+          "rent": 73369.5,
+          "opportunity": 6779736.5
+        },
+        "cohortMedianTotalCosts": 14572328,
+        "top10MedianTotalCosts": 12324922
       },
       "regions": {
         "서울특별시": {
@@ -144,7 +157,20 @@
             "labor": 2159286,
             "rent": 571429,
             "opportunity": 1495251
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 803428.5,
+            "fertilizer": 731071.5,
+            "pest": 151200,
+            "energy": 82803,
+            "materials": 879853.5,
+            "maintenance": 455050.5,
+            "labor": 92307.5,
+            "rent": 485769,
+            "opportunity": 5181242.5
+          },
+          "cohortMedianTotalCosts": 8672593.5,
+          "top10MedianTotalCosts": 7103591
         },
         "부산광역시": {
           "crop": "시설토마토",
@@ -167,7 +193,20 @@
             "labor": 5194286,
             "rent": 0,
             "opportunity": 20497199
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1941176,
+            "fertilizer": 846155,
+            "pest": 179818,
+            "energy": 1790852,
+            "materials": 2186018,
+            "maintenance": 3245706,
+            "labor": 3499158,
+            "rent": 982000,
+            "opportunity": 12200601
+          },
+          "cohortMedianTotalCosts": 25116403,
+          "top10MedianTotalCosts": 48525673
         },
         "대구광역시": {
           "crop": "시설토마토",
@@ -190,7 +229,20 @@
             "labor": 1888425,
             "rent": 693000,
             "opportunity": 14259490
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1136348,
+            "fertilizer": 883575,
+            "pest": 145000,
+            "energy": 3654391,
+            "materials": 2772000,
+            "maintenance": 881342,
+            "labor": 2148438,
+            "rent": 19370,
+            "opportunity": 8656466
+          },
+          "cohortMedianTotalCosts": 23166394,
+          "top10MedianTotalCosts": 30461798
         },
         "인천광역시": {
           "crop": "시설토마토",
@@ -213,7 +265,20 @@
             "labor": 0,
             "rent": 0,
             "opportunity": 3550585
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1211979,
+            "fertilizer": 489375,
+            "pest": 282857,
+            "energy": 222143,
+            "materials": 1062142.5,
+            "maintenance": 1928544.5,
+            "labor": 0,
+            "rent": 225000,
+            "opportunity": 3491227.5
+          },
+          "cohortMedianTotalCosts": 9486973.5,
+          "top10MedianTotalCosts": 8059300
         },
         "경기도": {
           "crop": "시설토마토",
@@ -236,7 +301,20 @@
             "labor": 2599994,
             "rent": 0,
             "opportunity": 9547703.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1200000,
+            "fertilizer": 600554,
+            "pest": 122000,
+            "energy": 518600,
+            "materials": 1382313,
+            "maintenance": 1475218,
+            "labor": 100000,
+            "rent": 0,
+            "opportunity": 8366207
+          },
+          "cohortMedianTotalCosts": 14490775,
+          "top10MedianTotalCosts": 22386758.5
         },
         "강원특별자치도": {
           "crop": "시설토마토",
@@ -259,7 +337,20 @@
             "labor": 251367,
             "rent": 130435,
             "opportunity": 6815529
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1615000,
+            "fertilizer": 881175,
+            "pest": 320132.5,
+            "energy": 203997.5,
+            "materials": 1051943,
+            "maintenance": 1722871,
+            "labor": 1646167,
+            "rent": 0,
+            "opportunity": 4361073
+          },
+          "cohortMedianTotalCosts": 13480731,
+          "top10MedianTotalCosts": 11368986.5
         },
         "충청남도": {
           "crop": "시설토마토",
@@ -282,7 +373,20 @@
             "labor": 2703000,
             "rent": 720000,
             "opportunity": 7168919
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 750000,
+            "fertilizer": 262602,
+            "pest": 118091,
+            "energy": 594000,
+            "materials": 683964,
+            "maintenance": 947697,
+            "labor": 880000,
+            "rent": 0,
+            "opportunity": 6141762
+          },
+          "cohortMedianTotalCosts": 11527638,
+          "top10MedianTotalCosts": 18789243
         },
         "전라남도": {
           "crop": "시설토마토",
@@ -305,7 +409,20 @@
             "labor": 8308750,
             "rent": 450000,
             "opportunity": 5844978
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1717875,
+            "fertilizer": 682125,
+            "pest": 455813,
+            "energy": 3236046,
+            "materials": 4161000,
+            "maintenance": 5304763,
+            "labor": 1150793,
+            "rent": 450000,
+            "opportunity": 5844978
+          },
+          "cohortMedianTotalCosts": 29360923,
+          "top10MedianTotalCosts": 30215185
         },
         "경상북도": {
           "crop": "시설토마토",
@@ -328,7 +445,20 @@
             "labor": 3087000,
             "rent": 0,
             "opportunity": 5091025
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1500000,
+            "fertilizer": 387000,
+            "pest": 101053,
+            "energy": 1215114,
+            "materials": 1312500,
+            "maintenance": 1286905,
+            "labor": 158400,
+            "rent": 353331,
+            "opportunity": 6182358
+          },
+          "cohortMedianTotalCosts": 13513645,
+          "top10MedianTotalCosts": 12862927
         },
         "경상남도": {
           "crop": "시설토마토",
@@ -351,7 +481,20 @@
             "labor": 652714,
             "rent": 357857,
             "opportunity": 8413557
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1458928.5,
+            "fertilizer": 1276159,
+            "pest": 832225,
+            "energy": 2225263.5,
+            "materials": 2396606,
+            "maintenance": 1581681.5,
+            "labor": 326357,
+            "rent": 528928.5,
+            "opportunity": 8008288.5
+          },
+          "cohortMedianTotalCosts": 17783148,
+          "top10MedianTotalCosts": 18523588
         }
       }
     },
@@ -378,7 +521,20 @@
           "labor": 4018000,
           "rent": 0,
           "opportunity": 2824154
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 1427313.5,
+          "fertilizer": 1189918.5,
+          "pest": 323559.5,
+          "energy": 3507752,
+          "materials": 4068257.5,
+          "maintenance": 4975386,
+          "labor": 3381246,
+          "rent": 0,
+          "opportunity": 10991101.5
+        },
+        "cohortMedianTotalCosts": 33057132.5,
+        "top10MedianTotalCosts": 14686837
       },
       "regions": {
         "부산광역시": {
@@ -402,7 +558,20 @@
             "labor": 7364859,
             "rent": 0,
             "opportunity": 4914400
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1755375,
+            "fertilizer": 1118710,
+            "pest": 328369,
+            "energy": 3039386,
+            "materials": 4723808,
+            "maintenance": 10047769,
+            "labor": 3733333,
+            "rent": 0,
+            "opportunity": 15319131
+          },
+          "cohortMedianTotalCosts": 41990653,
+          "top10MedianTotalCosts": 26275313
         },
         "경기도": {
           "crop": "시설토마토(수경)",
@@ -425,7 +594,20 @@
             "labor": 123750,
             "rent": 0,
             "opportunity": 13997519
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1425000,
+            "fertilizer": 768750,
+            "pest": 173925,
+            "energy": 1536000,
+            "materials": 2596837,
+            "maintenance": 2538687,
+            "labor": 123750,
+            "rent": 0,
+            "opportunity": 13111282
+          },
+          "cohortMedianTotalCosts": 22248825,
+          "top10MedianTotalCosts": 22248825
         },
         "강원특별자치도": {
           "crop": "시설토마토(수경)",
@@ -448,7 +630,20 @@
             "labor": 4829859,
             "rent": 0,
             "opportunity": 2824154
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1318800,
+            "fertilizer": 1006901.5,
+            "pest": 143092.5,
+            "energy": 715318,
+            "materials": 1872858,
+            "maintenance": 2837952.5,
+            "labor": 4009000,
+            "rent": 0,
+            "opportunity": 2818687
+          },
+          "cohortMedianTotalCosts": 14597289,
+          "top10MedianTotalCosts": 14686837
         },
         "전북특별자치도": {
           "crop": "시설토마토(수경)",
@@ -471,7 +666,20 @@
             "labor": 2431172,
             "rent": 0,
             "opportunity": 11553131
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1187683,
+            "fertilizer": 2712329,
+            "pest": 600478,
+            "energy": 8461720,
+            "materials": 4136223,
+            "maintenance": 8177025,
+            "labor": 5661715,
+            "rent": 210000,
+            "opportunity": 12615498
+          },
+          "cohortMedianTotalCosts": 46845175,
+          "top10MedianTotalCosts": 51257584
         },
         "전라남도": {
           "crop": "시설토마토(수경)",
@@ -494,7 +702,20 @@
             "labor": 5657969,
             "rent": 654500,
             "opportunity": 12267413
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1551212,
+            "fertilizer": 1424732,
+            "pest": 605472,
+            "energy": 5403614.5,
+            "materials": 5468600.5,
+            "maintenance": 4893071.5,
+            "labor": 5165116,
+            "rent": 287727.5,
+            "opportunity": 12267413
+          },
+          "cohortMedianTotalCosts": 39002822,
+          "top10MedianTotalCosts": 41216965.5
         },
         "경상북도": {
           "crop": "시설토마토(수경)",
@@ -517,7 +738,20 @@
             "labor": 6359700,
             "rent": 0,
             "opportunity": 12163914
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1095000,
+            "fertilizer": 3063790.5,
+            "pest": 596263,
+            "energy": 5010605.5,
+            "materials": 3957599,
+            "maintenance": 13966397,
+            "labor": 2814291,
+            "rent": 0,
+            "opportunity": 10626464.5
+          },
+          "cohortMedianTotalCosts": 40740678.5,
+          "top10MedianTotalCosts": 68831656
         },
         "경상남도": {
           "crop": "시설토마토(수경)",
@@ -540,7 +774,20 @@
             "labor": 2606225,
             "rent": 204545.5,
             "opportunity": 7913913
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1500000,
+            "fertilizer": 1008924,
+            "pest": 282529,
+            "energy": 4500000,
+            "materials": 4794940,
+            "maintenance": 6519464,
+            "labor": 1952775,
+            "rent": 0,
+            "opportunity": 7955772
+          },
+          "cohortMedianTotalCosts": 33022914,
+          "top10MedianTotalCosts": 24811192
         }
       }
     },
@@ -567,7 +814,20 @@
           "labor": 1916385,
           "rent": 353484,
           "opportunity": 3916718
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 402171.5,
+          "fertilizer": 651860,
+          "pest": 375102.5,
+          "energy": 114292,
+          "materials": 1631074,
+          "maintenance": 1384532,
+          "labor": 742125,
+          "rent": 365568,
+          "opportunity": 4208664.5
+        },
+        "cohortMedianTotalCosts": 10108023,
+        "top10MedianTotalCosts": 10376903
       },
       "regions": {
         "대구광역시": {
@@ -591,7 +851,20 @@
             "labor": 1218582.5,
             "rent": 561830.5,
             "opportunity": 2482182
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 236015.5,
+            "fertilizer": 838639,
+            "pest": 348563.5,
+            "energy": 153750,
+            "materials": 1602586.5,
+            "maintenance": 338905.5,
+            "labor": 1218679,
+            "rent": 623240,
+            "opportunity": 4425348.5
+          },
+          "cohortMedianTotalCosts": 10188516.5,
+          "top10MedianTotalCosts": 7436645
         },
         "경기도": {
           "crop": "시설참외",
@@ -614,7 +887,20 @@
             "labor": 126000,
             "rent": 300000,
             "opportunity": 4579908.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 637500,
+            "fertilizer": 256420,
+            "pest": 216000,
+            "energy": 160100,
+            "materials": 1349108,
+            "maintenance": 1059882,
+            "labor": 0,
+            "rent": 384733,
+            "opportunity": 4374064
+          },
+          "cohortMedianTotalCosts": 8570530,
+          "top10MedianTotalCosts": 8778087
         },
         "경상북도": {
           "crop": "시설참외",
@@ -637,7 +923,20 @@
             "labor": 1916385,
             "rent": 353484,
             "opportunity": 3916718
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 403200,
+            "fertilizer": 652804,
+            "pest": 424500,
+            "energy": 106525,
+            "materials": 1871831,
+            "maintenance": 1591038,
+            "labor": 761250,
+            "rent": 315000,
+            "opportunity": 4044273
+          },
+          "cohortMedianTotalCosts": 10327596,
+          "top10MedianTotalCosts": 10376903
         }
       }
     },
@@ -664,7 +963,20 @@
           "labor": 2317083.5,
           "rent": 0,
           "opportunity": 4081091.5
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 714000,
+          "fertilizer": 615600,
+          "pest": 711000,
+          "energy": 256163,
+          "materials": 1026629,
+          "maintenance": 1567567,
+          "labor": 1713750,
+          "rent": 0,
+          "opportunity": 5683157
+        },
+        "cohortMedianTotalCosts": 14552708,
+        "top10MedianTotalCosts": 15652745
       },
       "regions": {
         "광주광역시": {
@@ -688,7 +1000,20 @@
             "labor": 0,
             "rent": 0,
             "opportunity": 3491642
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 714000,
+            "fertilizer": 468000,
+            "pest": 525375,
+            "energy": 256163,
+            "materials": 717429,
+            "maintenance": 955635,
+            "labor": 1713750,
+            "rent": 0,
+            "opportunity": 4252763
+          },
+          "cohortMedianTotalCosts": 9965853,
+          "top10MedianTotalCosts": 6368417
         },
         "강원특별자치도": {
           "crop": "시설고추",
@@ -711,7 +1036,20 @@
             "labor": 2630836,
             "rent": 0,
             "opportunity": 3269044
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 990000,
+            "fertilizer": 970000,
+            "pest": 784313,
+            "energy": 49005,
+            "materials": 1037500,
+            "maintenance": 1567567,
+            "labor": 3382500,
+            "rent": 0,
+            "opportunity": 4940390
+          },
+          "cohortMedianTotalCosts": 14734369,
+          "top10MedianTotalCosts": 12005507.5
         },
         "충청남도": {
           "crop": "시설고추",
@@ -734,7 +1072,20 @@
             "labor": 1554000,
             "rent": 123333.5,
             "opportunity": 4919072.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 464062,
+            "fertilizer": 358850,
+            "pest": 348047,
+            "energy": 147609,
+            "materials": 306000,
+            "maintenance": 1732777,
+            "labor": 330804,
+            "rent": 0,
+            "opportunity": 6089545
+          },
+          "cohortMedianTotalCosts": 12444946,
+          "top10MedianTotalCosts": 13592141
         },
         "전라남도": {
           "crop": "시설고추",
@@ -757,7 +1108,20 @@
             "labor": 2206250,
             "rent": 75000,
             "opportunity": 1344209
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 714286,
+            "fertilizer": 466667,
+            "pest": 520000,
+            "energy": 109886,
+            "materials": 894444,
+            "maintenance": 477293,
+            "labor": 1748438,
+            "rent": 0,
+            "opportunity": 1601595
+          },
+          "cohortMedianTotalCosts": 7507268,
+          "top10MedianTotalCosts": 7720290
         },
         "경상북도": {
           "crop": "시설고추",
@@ -780,7 +1144,20 @@
             "labor": 0,
             "rent": 0,
             "opportunity": 12062988
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 824829,
+            "fertilizer": 581310,
+            "pest": 832500,
+            "energy": 151110,
+            "materials": 674450,
+            "maintenance": 1720923.5,
+            "labor": 0,
+            "rent": 0,
+            "opportunity": 12224019
+          },
+          "cohortMedianTotalCosts": 16758033,
+          "top10MedianTotalCosts": 16604826
         },
         "경상남도": {
           "crop": "시설고추",
@@ -803,7 +1180,20 @@
             "labor": 2831708.5,
             "rent": 390500,
             "opportunity": 6328332
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 772800,
+            "fertilizer": 863915,
+            "pest": 975000,
+            "energy": 4493000,
+            "materials": 1645385,
+            "maintenance": 2329715,
+            "labor": 1902188,
+            "rent": 78750,
+            "opportunity": 6575021
+          },
+          "cohortMedianTotalCosts": 21768474,
+          "top10MedianTotalCosts": 24775955
         }
       }
     },
@@ -830,7 +1220,20 @@
           "labor": 6186000,
           "rent": 262500,
           "opportunity": 4466924
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 1600000,
+          "fertilizer": 1033071.5,
+          "pest": 213447.5,
+          "energy": 2743963,
+          "materials": 2448728.5,
+          "maintenance": 2456771,
+          "labor": 2879087.5,
+          "rent": 0,
+          "opportunity": 7832842
+        },
+        "cohortMedianTotalCosts": 22471338,
+        "top10MedianTotalCosts": 24359329
       },
       "regions": {
         "광주광역시": {
@@ -854,7 +1257,20 @@
             "labor": 3774375,
             "rent": 350000,
             "opportunity": 6432748
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1650000,
+            "fertilizer": 709500,
+            "pest": 133110,
+            "energy": 1755000,
+            "materials": 1731368,
+            "maintenance": 1607143,
+            "labor": 0,
+            "rent": 350000,
+            "opportunity": 8543985
+          },
+          "cohortMedianTotalCosts": 19227241,
+          "top10MedianTotalCosts": 19227241
         },
         "경기도": {
           "crop": "시설방울토마토(수경)",
@@ -877,7 +1293,20 @@
             "labor": 2305000,
             "rent": 262500,
             "opportunity": 2059739
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1346700,
+            "fertilizer": 642755.5,
+            "pest": 187075,
+            "energy": 1309125,
+            "materials": 1642950,
+            "maintenance": 1343093.5,
+            "labor": 2510317,
+            "rent": 161250,
+            "opportunity": 2046315.5
+          },
+          "cohortMedianTotalCosts": 11292038.5,
+          "top10MedianTotalCosts": 8950739
         },
         "충청북도": {
           "crop": "시설방울토마토(수경)",
@@ -900,7 +1329,20 @@
             "labor": 475866,
             "rent": 0,
             "opportunity": 3875614
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1383333,
+            "fertilizer": 333333,
+            "pest": 200000,
+            "energy": 2433333,
+            "materials": 1381250,
+            "maintenance": 1045032,
+            "labor": 475866,
+            "rent": 0,
+            "opportunity": 10218338
+          },
+          "cohortMedianTotalCosts": 21872680,
+          "top10MedianTotalCosts": 8013918
         },
         "충청남도": {
           "crop": "시설방울토마토(수경)",
@@ -923,7 +1365,20 @@
             "labor": 3586132.5,
             "rent": 0,
             "opportunity": 6709781
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 2392201.5,
+            "fertilizer": 950000,
+            "pest": 395025.5,
+            "energy": 3548235,
+            "materials": 1246906,
+            "maintenance": 1470441,
+            "labor": 1288066.5,
+            "rent": 0,
+            "opportunity": 9693449
+          },
+          "cohortMedianTotalCosts": 21721673,
+          "top10MedianTotalCosts": 26571628.5
         },
         "전북특별자치도": {
           "crop": "시설방울토마토(수경)",
@@ -946,7 +1401,20 @@
             "labor": 1176000,
             "rent": 750000,
             "opportunity": 2555344
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1028415,
+            "fertilizer": 1913112,
+            "pest": 145030,
+            "energy": 3872019,
+            "materials": 2778595,
+            "maintenance": 8455570,
+            "labor": 3761250,
+            "rent": 0,
+            "opportunity": 11551539.5
+          },
+          "cohortMedianTotalCosts": 31763702,
+          "top10MedianTotalCosts": 19219942
         },
         "전라남도": {
           "crop": "시설방울토마토(수경)",
@@ -969,7 +1437,20 @@
             "labor": 5214688,
             "rent": 0,
             "opportunity": 4760475
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1616000,
+            "fertilizer": 1068275,
+            "pest": 186594,
+            "energy": 2936094,
+            "materials": 3713480.5,
+            "maintenance": 3779579,
+            "labor": 5140731,
+            "rent": 223179,
+            "opportunity": 7332986.5
+          },
+          "cohortMedianTotalCosts": 26092226,
+          "top10MedianTotalCosts": 24359329
         },
         "경상남도": {
           "crop": "시설방울토마토(수경)",
@@ -992,7 +1473,20 @@
             "labor": 4611429,
             "rent": 954643,
             "opportunity": 2581472
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1244000,
+            "fertilizer": 1765596,
+            "pest": 255471.5,
+            "energy": 2714000,
+            "materials": 4704470,
+            "maintenance": 3357091,
+            "labor": 3734286,
+            "rent": 742500,
+            "opportunity": 14461885
+          },
+          "cohortMedianTotalCosts": 31267904,
+          "top10MedianTotalCosts": 20557302
         }
       }
     },
@@ -1019,7 +1513,20 @@
           "labor": 1275375,
           "rent": 150000,
           "opportunity": 4710872
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 1312125,
+          "fertilizer": 480886,
+          "pest": 200528,
+          "energy": 1207510,
+          "materials": 1706458.5,
+          "maintenance": 1473322,
+          "labor": 941268.5,
+          "rent": 27649,
+          "opportunity": 6848432.5
+        },
+        "cohortMedianTotalCosts": 16110225.5,
+        "top10MedianTotalCosts": 14493090
       },
       "regions": {
         "광주광역시": {
@@ -1043,7 +1550,20 @@
             "labor": 2610000,
             "rent": 337500,
             "opportunity": 3908251
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1347625,
+            "fertilizer": 539342,
+            "pest": 223689,
+            "energy": 3743768,
+            "materials": 1319185,
+            "maintenance": 1449177,
+            "labor": 1169695.5,
+            "rent": 349407,
+            "opportunity": 6864479
+          },
+          "cohortMedianTotalCosts": 18111211.5,
+          "top10MedianTotalCosts": 12589966
         },
         "경기도": {
           "crop": "시설방울토마토",
@@ -1066,7 +1586,20 @@
             "labor": 282150,
             "rent": 0,
             "opportunity": 7739428
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1381395,
+            "fertilizer": 433125,
+            "pest": 414419,
+            "energy": 742500,
+            "materials": 1345613,
+            "maintenance": 1356864,
+            "labor": 1790988,
+            "rent": 0,
+            "opportunity": 6480590
+          },
+          "cohortMedianTotalCosts": 13493878,
+          "top10MedianTotalCosts": 14853565.5
         },
         "충청북도": {
           "crop": "시설방울토마토",
@@ -1089,7 +1622,20 @@
             "labor": 1092393.5,
             "rent": 273529.5,
             "opportunity": 1278453
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 940500,
+            "fertilizer": 456938,
+            "pest": 178782,
+            "energy": 280403,
+            "materials": 693750,
+            "maintenance": 564188,
+            "labor": 798750,
+            "rent": 149773,
+            "opportunity": 4227211
+          },
+          "cohortMedianTotalCosts": 8817021,
+          "top10MedianTotalCosts": 5620220.5
         },
         "충청남도": {
           "crop": "시설방울토마토",
@@ -1112,7 +1658,20 @@
             "labor": 1257840,
             "rent": 0,
             "opportunity": 2631849
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1335000,
+            "fertilizer": 488403.5,
+            "pest": 160538.5,
+            "energy": 2261630.5,
+            "materials": 2217453,
+            "maintenance": 1552130,
+            "labor": 944512.5,
+            "rent": 0,
+            "opportunity": 6764088.5
+          },
+          "cohortMedianTotalCosts": 15721942,
+          "top10MedianTotalCosts": 15410417
         },
         "전북특별자치도": {
           "crop": "시설방울토마토",
@@ -1135,7 +1694,20 @@
             "labor": 0,
             "rent": 0,
             "opportunity": 8249100
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1743000,
+            "fertilizer": 357000,
+            "pest": 135000,
+            "energy": 787385,
+            "materials": 2798520,
+            "maintenance": 4016375,
+            "labor": 103500,
+            "rent": 0,
+            "opportunity": 8091993
+          },
+          "cohortMedianTotalCosts": 19763552,
+          "top10MedianTotalCosts": 19763552
         },
         "전라남도": {
           "crop": "시설방울토마토",
@@ -1158,7 +1730,20 @@
             "labor": 6024375,
             "rent": 0,
             "opportunity": 4710872
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1190464.5,
+            "fertilizer": 507211,
+            "pest": 213000,
+            "energy": 1833195,
+            "materials": 2076062,
+            "maintenance": 2829604.5,
+            "labor": 1778532.5,
+            "rent": 346928.5,
+            "opportunity": 8356062.5
+          },
+          "cohortMedianTotalCosts": 21324615,
+          "top10MedianTotalCosts": 20712907
         },
         "경상남도": {
           "crop": "시설방울토마토",
@@ -1181,7 +1766,20 @@
             "labor": 640000,
             "rent": 552000,
             "opportunity": 8503493
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1687200,
+            "fertilizer": 900000,
+            "pest": 430250,
+            "energy": 2740937,
+            "materials": 2442418,
+            "maintenance": 3351390,
+            "labor": 1569555,
+            "rent": 720000,
+            "opportunity": 7354227
+          },
+          "cohortMedianTotalCosts": 22007400,
+          "top10MedianTotalCosts": 22007400
         }
       }
     },
@@ -1208,7 +1806,20 @@
           "labor": 2304040,
           "rent": 0,
           "opportunity": 7483429.5
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 5250000,
+          "fertilizer": 962914.5,
+          "pest": 533564.5,
+          "energy": 1838228,
+          "materials": 2649000,
+          "maintenance": 3789452.5,
+          "labor": 1784050,
+          "rent": 0,
+          "opportunity": 10910031.5
+        },
+        "cohortMedianTotalCosts": 30434251,
+        "top10MedianTotalCosts": 19559516.5
       },
       "regions": {
         "광주광역시": {
@@ -1232,7 +1843,20 @@
             "labor": 0,
             "rent": 0,
             "opportunity": 10908091
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 4731000,
+            "fertilizer": 1080090,
+            "pest": 500535,
+            "energy": 707184,
+            "materials": 2693709,
+            "maintenance": 1077703,
+            "labor": 168750,
+            "rent": 408784,
+            "opportunity": 9554785
+          },
+          "cohortMedianTotalCosts": 19825819,
+          "top10MedianTotalCosts": 19103930
         },
         "세종특별자치시": {
           "crop": "시설딸기(수경)",
@@ -1255,7 +1879,20 @@
             "labor": 5675000,
             "rent": 666667,
             "opportunity": 7964783
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5994894,
+            "fertilizer": 1248750,
+            "pest": 802500,
+            "energy": 2575000,
+            "materials": 2474494,
+            "maintenance": 2643483.5,
+            "labor": 5260000,
+            "rent": 843041,
+            "opportunity": 13409274
+          },
+          "cohortMedianTotalCosts": 36306586,
+          "top10MedianTotalCosts": 26421450
         },
         "경기도": {
           "crop": "시설딸기(수경)",
@@ -1278,7 +1915,20 @@
             "labor": 3610625,
             "rent": 0,
             "opportunity": 12772259
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5260714.5,
+            "fertilizer": 1801395.5,
+            "pest": 692416.5,
+            "energy": 4514196,
+            "materials": 4287587,
+            "maintenance": 7760552,
+            "labor": 1846591,
+            "rent": 0,
+            "opportunity": 18233656.5
+          },
+          "cohortMedianTotalCosts": 46718623.5,
+          "top10MedianTotalCosts": 41693948
         },
         "충청북도": {
           "crop": "시설딸기(수경)",
@@ -1301,7 +1951,20 @@
             "labor": 3046112.5,
             "rent": 0,
             "opportunity": 4536483.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 3620250,
+            "fertilizer": 1001250,
+            "pest": 447000,
+            "energy": 1866554.5,
+            "materials": 1317809.5,
+            "maintenance": 856301.5,
+            "labor": 1216846,
+            "rent": 18750,
+            "opportunity": 7430260.5
+          },
+          "cohortMedianTotalCosts": 20376357.5,
+          "top10MedianTotalCosts": 19746342.5
         },
         "충청남도": {
           "crop": "시설딸기(수경)",
@@ -1324,7 +1987,20 @@
             "labor": 1582918,
             "rent": 0,
             "opportunity": 6341929
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5066187.5,
+            "fertilizer": 802447,
+            "pest": 559764,
+            "energy": 1659379.5,
+            "materials": 1343649,
+            "maintenance": 2687175.5,
+            "labor": 1405009.5,
+            "rent": 0,
+            "opportunity": 7601775.5
+          },
+          "cohortMedianTotalCosts": 20252146,
+          "top10MedianTotalCosts": 23781715
         },
         "전북특별자치도": {
           "crop": "시설딸기(수경)",
@@ -1347,7 +2023,20 @@
             "labor": 620357,
             "rent": 380571.5,
             "opportunity": 16006016
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 6270000,
+            "fertilizer": 1224444.5,
+            "pest": 464609.5,
+            "energy": 2018163.5,
+            "materials": 3518554.5,
+            "maintenance": 6566783.5,
+            "labor": 3950813,
+            "rent": 0,
+            "opportunity": 16176723.5
+          },
+          "cohortMedianTotalCosts": 41556341.5,
+          "top10MedianTotalCosts": 39866523.5
         },
         "전라남도": {
           "crop": "시설딸기(수경)",
@@ -1370,7 +2059,20 @@
             "labor": 860000,
             "rent": 791666.5,
             "opportunity": 19352387.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5854166.5,
+            "fertilizer": 1008027,
+            "pest": 808813.5,
+            "energy": 2533794,
+            "materials": 3343068.5,
+            "maintenance": 7691833.5,
+            "labor": 2018833.5,
+            "rent": 0,
+            "opportunity": 23340417
+          },
+          "cohortMedianTotalCosts": 49523386.5,
+          "top10MedianTotalCosts": 40810421
         },
         "경상북도": {
           "crop": "시설딸기(수경)",
@@ -1393,7 +2095,20 @@
             "labor": 4693846,
             "rent": 0,
             "opportunity": 8146352
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5209615.5,
+            "fertilizer": 692308,
+            "pest": 737628,
+            "energy": 1539692.5,
+            "materials": 2061778.5,
+            "maintenance": 5476927,
+            "labor": 3906887.5,
+            "rent": 64187.5,
+            "opportunity": 10223360
+          },
+          "cohortMedianTotalCosts": 28960979,
+          "top10MedianTotalCosts": 28338330
         },
         "경상남도": {
           "crop": "시설딸기(수경)",
@@ -1416,7 +2131,20 @@
             "labor": 3885531,
             "rent": 762500,
             "opportunity": 5101243
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 4851000,
+            "fertilizer": 792000,
+            "pest": 429000,
+            "energy": 1632706,
+            "materials": 2906406,
+            "maintenance": 2576190,
+            "labor": 4372177,
+            "rent": 380984,
+            "opportunity": 7486601
+          },
+          "cohortMedianTotalCosts": 25932311,
+          "top10MedianTotalCosts": 20734183.5
         }
       }
     },
@@ -1443,7 +2171,20 @@
           "labor": 1668650,
           "rent": 242330,
           "opportunity": 3839065.5
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 1046730,
+          "fertilizer": 1062121,
+          "pest": 526500,
+          "energy": 2118282,
+          "materials": 1267682,
+          "maintenance": 1591791,
+          "labor": 1189801.5,
+          "rent": 49200,
+          "opportunity": 7762259
+        },
+        "cohortMedianTotalCosts": 17504080,
+        "top10MedianTotalCosts": 12959091.5
       },
       "regions": {
         "대전광역시": {
@@ -1467,7 +2208,20 @@
             "labor": 0,
             "rent": 450000,
             "opportunity": 4921530
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 833333,
+            "fertilizer": 1020961,
+            "pest": 577500,
+            "energy": 3060000,
+            "materials": 810000,
+            "maintenance": 1675565,
+            "labor": 586146,
+            "rent": 0,
+            "opportunity": 8431782
+          },
+          "cohortMedianTotalCosts": 16898400,
+          "top10MedianTotalCosts": 11739938
         },
         "세종특별자치시": {
           "crop": "시설오이",
@@ -1490,7 +2244,20 @@
             "labor": 3469258,
             "rent": 9462,
             "opportunity": 9299893
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 892800,
+            "fertilizer": 1527262,
+            "pest": 1545455,
+            "energy": 4342500,
+            "materials": 1710000,
+            "maintenance": 2052337,
+            "labor": 1125000,
+            "rent": 600000,
+            "opportunity": 11056312
+          },
+          "cohortMedianTotalCosts": 25302517,
+          "top10MedianTotalCosts": 22535916
         },
         "경기도": {
           "crop": "시설오이",
@@ -1513,7 +2280,20 @@
             "labor": 2710236.5,
             "rent": 314091,
             "opportunity": 3363776.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 977926.5,
+            "fertilizer": 788752.5,
+            "pest": 315417,
+            "energy": 338704,
+            "materials": 835513.5,
+            "maintenance": 992943.5,
+            "labor": 1660943.5,
+            "rent": 40543,
+            "opportunity": 5010061.5
+          },
+          "cohortMedianTotalCosts": 13417008.5,
+          "top10MedianTotalCosts": 10603035
         },
         "강원특별자치도": {
           "crop": "시설오이",
@@ -1536,7 +2316,20 @@
             "labor": 174375,
             "rent": 270000,
             "opportunity": 1868924
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 810000,
+            "fertilizer": 397020,
+            "pest": 255857,
+            "energy": 66000,
+            "materials": 722700,
+            "maintenance": 839625,
+            "labor": 623438,
+            "rent": 0,
+            "opportunity": 5187682
+          },
+          "cohortMedianTotalCosts": 8981790,
+          "top10MedianTotalCosts": 7321589
         },
         "충청남도": {
           "crop": "시설오이",
@@ -1559,7 +2352,20 @@
             "labor": 1144098,
             "rent": 262315,
             "opportunity": 2541810
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1015123,
+            "fertilizer": 947481,
+            "pest": 511660,
+            "energy": 1104984,
+            "materials": 805497,
+            "maintenance": 1163907,
+            "labor": 858333,
+            "rent": 237500,
+            "opportunity": 5201201
+          },
+          "cohortMedianTotalCosts": 12936389,
+          "top10MedianTotalCosts": 12377934
         },
         "전라남도": {
           "crop": "시설오이",
@@ -1582,7 +2388,20 @@
             "labor": 3062813,
             "rent": 379286,
             "opportunity": 11078269
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1705600,
+            "fertilizer": 1910500,
+            "pest": 1028571,
+            "energy": 4950440,
+            "materials": 3277166,
+            "maintenance": 4100610,
+            "labor": 2310000,
+            "rent": 300000,
+            "opportunity": 19908917
+          },
+          "cohortMedianTotalCosts": 40363125,
+          "top10MedianTotalCosts": 32720189
         },
         "경상북도": {
           "crop": "시설오이",
@@ -1605,7 +2424,20 @@
             "labor": 5510833,
             "rent": 0,
             "opportunity": 3794794
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1208571,
+            "fertilizer": 2395688,
+            "pest": 640000,
+            "energy": 4766865,
+            "materials": 3044003,
+            "maintenance": 5872174,
+            "labor": 3980000,
+            "rent": 12857,
+            "opportunity": 10376270
+          },
+          "cohortMedianTotalCosts": 35183727,
+          "top10MedianTotalCosts": 18856414
         },
         "경상남도": {
           "crop": "시설오이",
@@ -1628,7 +2460,20 @@
             "labor": 2102312.5,
             "rent": 272250,
             "opportunity": 7497810
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 1162500,
+            "fertilizer": 1051806.5,
+            "pest": 494000,
+            "energy": 2364025,
+            "materials": 1854992,
+            "maintenance": 1349669.5,
+            "labor": 1102500,
+            "rent": 10000,
+            "opportunity": 7772123.5
+          },
+          "cohortMedianTotalCosts": 17943570,
+          "top10MedianTotalCosts": 18357799.5
         }
       }
     },
@@ -1655,7 +2500,20 @@
           "labor": 3057353,
           "rent": 0,
           "opportunity": 4125577
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 5250000,
+          "fertilizer": 478927,
+          "pest": 337530,
+          "energy": 1261320,
+          "materials": 2463257,
+          "maintenance": 2110368,
+          "labor": 2100000,
+          "rent": 331208,
+          "opportunity": 8564256
+        },
+        "cohortMedianTotalCosts": 23069765,
+        "top10MedianTotalCosts": 19492034
       },
       "regions": {
         "세종특별자치시": {
@@ -1679,7 +2537,20 @@
             "labor": 876159,
             "rent": 1060927,
             "opportunity": 6945916
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 6258278,
+            "fertilizer": 1101122,
+            "pest": 1100000,
+            "energy": 2100000,
+            "materials": 4088742,
+            "maintenance": 3602101,
+            "labor": 1227398,
+            "rent": 909184,
+            "opportunity": 12228892
+          },
+          "cohortMedianTotalCosts": 32478146,
+          "top10MedianTotalCosts": 27447263
         },
         "경기도": {
           "crop": "시설딸기",
@@ -1702,7 +2573,20 @@
             "labor": 5224500,
             "rent": 0,
             "opportunity": 9930417
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 4564285.5,
+            "fertilizer": 928813.5,
+            "pest": 488143,
+            "energy": 1509444.5,
+            "materials": 2738682,
+            "maintenance": 3087416.5,
+            "labor": 3814363.5,
+            "rent": 315000,
+            "opportunity": 9295295.5
+          },
+          "cohortMedianTotalCosts": 26992520,
+          "top10MedianTotalCosts": 26726247
         },
         "충청남도": {
           "crop": "시설딸기",
@@ -1725,7 +2609,20 @@
             "labor": 2886345,
             "rent": 299496,
             "opportunity": 2883332
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5590588,
+            "fertilizer": 392017,
+            "pest": 227550,
+            "energy": 1501978.5,
+            "materials": 2072019,
+            "maintenance": 2144846.5,
+            "labor": 1407525,
+            "rent": 0,
+            "opportunity": 5409941.5
+          },
+          "cohortMedianTotalCosts": 19789348.5,
+          "top10MedianTotalCosts": 23573128.5
         },
         "전북특별자치도": {
           "crop": "시설딸기",
@@ -1748,7 +2645,20 @@
             "labor": 3420000,
             "rent": 0,
             "opportunity": 14884059
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 6562042.5,
+            "fertilizer": 783750,
+            "pest": 488030,
+            "energy": 772965,
+            "materials": 3497187.5,
+            "maintenance": 3471644,
+            "labor": 3273812.5,
+            "rent": 0,
+            "opportunity": 11890218
+          },
+          "cohortMedianTotalCosts": 30639569,
+          "top10MedianTotalCosts": 34028367
         },
         "전라남도": {
           "crop": "시설딸기",
@@ -1771,7 +2681,20 @@
             "labor": 958500,
             "rent": 660000,
             "opportunity": 10115766
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5345795.5,
+            "fertilizer": 857670.5,
+            "pest": 465858,
+            "energy": 619750,
+            "materials": 2236129,
+            "maintenance": 2369941,
+            "labor": 1479250,
+            "rent": 417750,
+            "opportunity": 20231537
+          },
+          "cohortMedianTotalCosts": 38447462.5,
+          "top10MedianTotalCosts": 19746349
         },
         "경상북도": {
           "crop": "시설딸기",
@@ -1794,7 +2717,20 @@
             "labor": 925000,
             "rent": 450000,
             "opportunity": 10541496
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 5250000,
+            "fertilizer": 515475,
+            "pest": 92500,
+            "energy": 741998.5,
+            "materials": 1348850,
+            "maintenance": 1000339.5,
+            "labor": 4725000,
+            "rent": 397500,
+            "opportunity": 9376598.5
+          },
+          "cohortMedianTotalCosts": 21358314.5,
+          "top10MedianTotalCosts": 19983389
         },
         "경상남도": {
           "crop": "시설딸기",
@@ -1817,7 +2753,20 @@
             "labor": 5016644.5,
             "rent": 269891.5,
             "opportunity": 3329807
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 4338189.5,
+            "fertilizer": 431633,
+            "pest": 403575,
+            "energy": 1291467.5,
+            "materials": 2507753,
+            "maintenance": 1069351.5,
+            "labor": 2412141,
+            "rent": 572940,
+            "opportunity": 7019782.5
+          },
+          "cohortMedianTotalCosts": 19628123.5,
+          "top10MedianTotalCosts": 18885652.5
         }
       }
     },
@@ -1844,7 +2793,20 @@
           "labor": 1752500,
           "rent": 268981,
           "opportunity": 4044888
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 394163,
+          "fertilizer": 367500,
+          "pest": 87482,
+          "energy": 267225,
+          "materials": 1151825,
+          "maintenance": 1523029,
+          "labor": 1534453,
+          "rent": 109800,
+          "opportunity": 3887140
+        },
+        "cohortMedianTotalCosts": 10019177,
+        "top10MedianTotalCosts": 10696619
       },
       "regions": {
         "경기도": {
@@ -1868,7 +2830,20 @@
             "labor": 2334906,
             "rent": 268981,
             "opportunity": 4044888
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 420000,
+            "fertilizer": 344719,
+            "pest": 85500,
+            "energy": 269254,
+            "materials": 1119928,
+            "maintenance": 1042603,
+            "labor": 1939806,
+            "rent": 216000,
+            "opportunity": 2456544
+          },
+          "cohortMedianTotalCosts": 7641590,
+          "top10MedianTotalCosts": 10431728
         },
         "충청남도": {
           "crop": "시설상추",
@@ -1891,7 +2866,20 @@
             "labor": 0,
             "rent": 0,
             "opportunity": 5012105
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 208971,
+            "fertilizer": 246000,
+            "pest": 59000,
+            "energy": 150000,
+            "materials": 741330,
+            "maintenance": 1797214,
+            "labor": 0,
+            "rent": 0,
+            "opportunity": 5012105
+          },
+          "cohortMedianTotalCosts": 8297400,
+          "top10MedianTotalCosts": 7426933
         },
         "전북특별자치도": {
           "crop": "시설상추",
@@ -1914,7 +2902,20 @@
             "labor": 4700044,
             "rent": 112500,
             "opportunity": 4865975.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 445500,
+            "fertilizer": 546750,
+            "pest": 89732,
+            "energy": 359172,
+            "materials": 1379400,
+            "maintenance": 2489174.5,
+            "labor": 1677135,
+            "rent": 0,
+            "opportunity": 7644589
+          },
+          "cohortMedianTotalCosts": 14928918,
+          "top10MedianTotalCosts": 16156194.5
         }
       }
     },
@@ -1941,7 +2942,20 @@
           "labor": 614423,
           "rent": 0,
           "opportunity": 1444435
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 542571.5,
+          "fertilizer": 349731,
+          "pest": 121500,
+          "energy": 82652.5,
+          "materials": 623743,
+          "maintenance": 596997.5,
+          "labor": 593333.5,
+          "rent": 75000,
+          "opportunity": 1884044
+        },
+        "cohortMedianTotalCosts": 5297578,
+        "top10MedianTotalCosts": 4363955
       },
       "regions": {
         "경기도": {
@@ -1965,7 +2979,20 @@
             "labor": 672964.5,
             "rent": 42036.5,
             "opportunity": 1512231.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 589613.5,
+            "fertilizer": 367552.5,
+            "pest": 94566,
+            "energy": 71007.5,
+            "materials": 496757.5,
+            "maintenance": 952592.5,
+            "labor": 544207.5,
+            "rent": 6201,
+            "opportunity": 2849002
+          },
+          "cohortMedianTotalCosts": 6037149,
+          "top10MedianTotalCosts": 5251620.5
         },
         "충청북도": {
           "crop": "시설수박",
@@ -1988,7 +3015,20 @@
             "labor": 939246,
             "rent": 37500,
             "opportunity": 299680
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 503077,
+            "fertilizer": 359550,
+            "pest": 104650,
+            "energy": 59700,
+            "materials": 276297,
+            "maintenance": 299116,
+            "labor": 723241.5,
+            "rent": 147058.5,
+            "opportunity": 626824
+          },
+          "cohortMedianTotalCosts": 3400881.5,
+          "top10MedianTotalCosts": 3069873
         },
         "충청남도": {
           "crop": "시설수박",
@@ -2011,7 +3051,20 @@
             "labor": 231393,
             "rent": 0,
             "opportunity": 1243186.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 605038,
+            "fertilizer": 307557,
+            "pest": 84080.5,
+            "energy": 101532,
+            "materials": 383640.5,
+            "maintenance": 560882.5,
+            "labor": 416625,
+            "rent": 0,
+            "opportunity": 1748872.5
+          },
+          "cohortMedianTotalCosts": 4418220,
+          "top10MedianTotalCosts": 4057517.5
         },
         "전북특별자치도": {
           "crop": "시설수박",
@@ -2034,7 +3087,20 @@
             "labor": 385352,
             "rent": 159375,
             "opportunity": 1038755.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 829500,
+            "fertilizer": 239373.5,
+            "pest": 125578,
+            "energy": 120016.5,
+            "materials": 591869.5,
+            "maintenance": 779044,
+            "labor": 532900.5,
+            "rent": 67901,
+            "opportunity": 2187374
+          },
+          "cohortMedianTotalCosts": 5756698,
+          "top10MedianTotalCosts": 4877372
         },
         "전라남도": {
           "crop": "시설수박",
@@ -2057,7 +3123,20 @@
             "labor": 493750,
             "rent": 875,
             "opportunity": 1098549.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 540000,
+            "fertilizer": 335250,
+            "pest": 113667,
+            "energy": 53000,
+            "materials": 547083,
+            "maintenance": 794213,
+            "labor": 650000,
+            "rent": 1750,
+            "opportunity": 1560709
+          },
+          "cohortMedianTotalCosts": 4969406,
+          "top10MedianTotalCosts": 3491855.5
         },
         "경상북도": {
           "crop": "시설수박",
@@ -2080,7 +3159,20 @@
             "labor": 608371.5,
             "rent": 59594.5,
             "opportunity": 2555356.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 545143,
+            "fertilizer": 445114,
+            "pest": 123000,
+            "energy": 115925,
+            "materials": 851868,
+            "maintenance": 606963,
+            "labor": 1237500,
+            "rent": 90594,
+            "opportunity": 2377956
+          },
+          "cohortMedianTotalCosts": 6457801,
+          "top10MedianTotalCosts": 6186229.5
         },
         "경상남도": {
           "crop": "시설수박",
@@ -2103,7 +3195,20 @@
             "labor": 639034,
             "rent": 274667,
             "opportunity": 1607594
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 397340,
+            "fertilizer": 364404,
+            "pest": 138882.5,
+            "energy": 99885,
+            "materials": 846986.5,
+            "maintenance": 394344,
+            "labor": 489140.5,
+            "rent": 189906.5,
+            "opportunity": 1836542
+          },
+          "cohortMedianTotalCosts": 4873581,
+          "top10MedianTotalCosts": 4739565
         }
       }
     },
@@ -2130,7 +3235,20 @@
           "labor": 679274,
           "rent": 129021,
           "opportunity": 1881052
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 634483.5,
+          "fertilizer": 369861,
+          "pest": 191050,
+          "energy": 106752,
+          "materials": 1124421.5,
+          "maintenance": 1676438.5,
+          "labor": 611250,
+          "rent": 37172,
+          "opportunity": 3059506
+        },
+        "cohortMedianTotalCosts": 8759503.5,
+        "top10MedianTotalCosts": 7806089
       },
       "regions": {
         "강원특별자치도": {
@@ -2154,7 +3272,20 @@
             "labor": 1581429,
             "rent": 139286,
             "opportunity": 1332648
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 600000,
+            "fertilizer": 316750,
+            "pest": 180000,
+            "energy": 263040,
+            "materials": 499320,
+            "maintenance": 1682489,
+            "labor": 23571,
+            "rent": 0,
+            "opportunity": 4507891
+          },
+          "cohortMedianTotalCosts": 9138563,
+          "top10MedianTotalCosts": 6749889
         },
         "충청남도": {
           "crop": "시설멜론",
@@ -2177,7 +3308,20 @@
             "labor": 958972,
             "rent": 120942.5,
             "opportunity": 2345999
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 808639,
+            "fertilizer": 194400,
+            "pest": 165500,
+            "energy": 92691,
+            "materials": 1093182,
+            "maintenance": 1674627,
+            "labor": 612500,
+            "rent": 0,
+            "opportunity": 2951349
+          },
+          "cohortMedianTotalCosts": 7048266,
+          "top10MedianTotalCosts": 6820320.5
         },
         "전북특별자치도": {
           "crop": "시설멜론",
@@ -2200,7 +3344,20 @@
             "labor": 361054.5,
             "rent": 1789,
             "opportunity": 1787139.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 682500,
+            "fertilizer": 400250,
+            "pest": 179708,
+            "energy": 91309,
+            "materials": 1819155,
+            "maintenance": 1990947.5,
+            "labor": 690000,
+            "rent": 0,
+            "opportunity": 3541047
+          },
+          "cohortMedianTotalCosts": 9191458.5,
+          "top10MedianTotalCosts": 6184299
         },
         "전라남도": {
           "crop": "시설멜론",
@@ -2223,7 +3380,20 @@
             "labor": 2172937.5,
             "rent": 386250,
             "opportunity": 1045135
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 884100,
+            "fertilizer": 397350,
+            "pest": 230769,
+            "energy": 182000,
+            "materials": 1023230,
+            "maintenance": 2408129,
+            "labor": 690000,
+            "rent": 412500,
+            "opportunity": 3107120
+          },
+          "cohortMedianTotalCosts": 10788727,
+          "top10MedianTotalCosts": 8635401
         },
         "경상남도": {
           "crop": "시설멜론",
@@ -2246,7 +3416,20 @@
             "labor": 898548,
             "rent": 299516,
             "opportunity": 1834731
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 404494,
+            "fertilizer": 327525,
+            "pest": 225750,
+            "energy": 96843,
+            "materials": 1246678,
+            "maintenance": 644325,
+            "labor": 432857,
+            "rent": 254464,
+            "opportunity": 2039158
+          },
+          "cohortMedianTotalCosts": 6092529,
+          "top10MedianTotalCosts": 5608143
         }
       }
     },
@@ -2273,7 +3456,20 @@
           "labor": 4041536.5,
           "rent": 137686.5,
           "opportunity": 2468400
-        }
+        },
+        "cohortMedianCosts": {
+          "seed": 2332813,
+          "fertilizer": 2220500,
+          "pest": 1089730,
+          "energy": 6172500,
+          "materials": 4639167,
+          "maintenance": 4763481,
+          "labor": 5235116,
+          "rent": 0,
+          "opportunity": 5788868
+        },
+        "cohortMedianTotalCosts": 34458259,
+        "top10MedianTotalCosts": 22178564
       },
       "regions": {
         "강원특별자치도": {
@@ -2297,7 +3493,20 @@
             "labor": 5505669,
             "rent": 0,
             "opportunity": 2277807
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 2398072,
+            "fertilizer": 2018179,
+            "pest": 848716,
+            "energy": 935834,
+            "materials": 4367500,
+            "maintenance": 3612000,
+            "labor": 5505669,
+            "rent": 0,
+            "opportunity": 3668287
+          },
+          "cohortMedianTotalCosts": 27770721,
+          "top10MedianTotalCosts": 25286695
         },
         "전북특별자치도": {
           "crop": "시설파프리카",
@@ -2320,7 +3529,20 @@
             "labor": 5767500,
             "rent": 540000,
             "opportunity": 4572115
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 2460000,
+            "fertilizer": 2558156,
+            "pest": 1542451,
+            "energy": 6417602,
+            "materials": 10486717,
+            "maintenance": 5210550,
+            "labor": 5718214,
+            "rent": 0,
+            "opportunity": 5155045
+          },
+          "cohortMedianTotalCosts": 43097219,
+          "top10MedianTotalCosts": 39866221
         },
         "전라남도": {
           "crop": "시설파프리카",
@@ -2343,7 +3565,20 @@
             "labor": 9091636,
             "rent": 272727,
             "opportunity": 5144935
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 2332813,
+            "fertilizer": 2719567,
+            "pest": 1700000,
+            "energy": 10958908,
+            "materials": 3960461,
+            "maintenance": 5132695,
+            "labor": 8238830,
+            "rent": 0,
+            "opportunity": 8261923
+          },
+          "cohortMedianTotalCosts": 43935496,
+          "top10MedianTotalCosts": 41171409
         },
         "경상남도": {
           "crop": "시설파프리카",
@@ -2366,7 +3601,20 @@
             "labor": 1684373,
             "rent": 137686.5,
             "opportunity": 2090550.5
-          }
+          },
+          "cohortMedianCosts": {
+            "seed": 2219164.5,
+            "fertilizer": 2697795,
+            "pest": 1477079.5,
+            "energy": 6467082.5,
+            "materials": 4449924.5,
+            "maintenance": 7825436,
+            "labor": 2021689.5,
+            "rent": 185055,
+            "opportunity": 6012608
+          },
+          "cohortMedianTotalCosts": 34122265,
+          "top10MedianTotalCosts": 17764257
         }
       }
     }
