@@ -21,5 +21,7 @@ describe('기간 비교와 실제 시계열',()=>{
 describe('입력 단위와 한글 금액',()=>{
  it('만원 입력·소수 입력을 원으로 변환한다',()=>{expect(parseMoneyInput('1,500','manwon')).toBe('15000000');expect(parseMoneyInput('1.0001','manwon')).toBe('10001');expect(parseMoneyInput('15,000,000','won')).toBe('15000000');expect(moneyInputText('15000000','manwon')).toBe('1,500');});
  it('빈칸과 0을 구분하고 음수·초과·소수 자릿수를 거부한다',()=>{expect(parseMoneyInput('','manwon')).toBe('');expect(parseMoneyInput('0','manwon')).toBe('0');expect(()=>parseMoneyInput('-10','manwon')).toThrow();expect(()=>parseMoneyInput('1.00001','manwon')).toThrow();expect(()=>parseMoneyInput('999999999999999','won')).toThrow();});
- it('천·백·만·억 단위 금액을 정확히 읽는다',()=>{expect(koreanMoney(15000000)).toBe('1천 5백만 원');expect(koreanMoney(100000)).toBe('10만 원');expect(koreanMoney(100000000)).toBe('1억 원');expect(koreanMoney(0)).toBe('0원');});
+ it('천·백·만·억 단위 금액을 정확히 읽는다',()=>{expect(koreanMoney(15000000)).toBe('1,500만원');expect(koreanMoney(100000)).toBe('10만원');expect(koreanMoney(100000000)).toBe('1억원');expect(koreanMoney(0)).toBe('0원');});
 });
+
+it('금액은 만 단위로 묶고 잔여 원을 생략하지 않는다',()=>{expect(koreanMoney(2488717)).toBe('248만 8,717원');expect(koreanMoney(100000001)).toBe('1억 1원');expect(koreanMoney(9999)).toBe('9,999원');expect(koreanMoney(9999999999999)).toBe('9조 9,999억 9,999만 9,999원');});
