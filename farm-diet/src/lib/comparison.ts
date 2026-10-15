@@ -31,6 +31,7 @@ export function resolvePeriodBenchmark(data: BenchmarkData[], crop: string, regi
     costs:Object.fromEntries(CATEGORIES.map(c=>[c.key,mean(cohorts.map(b=>b.costs[c.key]))])) as Costs,
     medianRevenue:mean(cohorts.map(c=>c.medianRevenue)), medianNetProfit:mean(cohorts.map(c=>c.medianNetProfit)), medianNetProfitRate:mean(cohorts.map(c=>c.medianNetProfitRate)), medianOmittedCosts:mean(cohorts.map(c=>c.medianOmittedCosts)),
     cohortMedianCosts:cohorts.every(b=>b.cohortMedianCosts)?Object.fromEntries(CATEGORIES.map(c=>[c.key,mean(cohorts.map(b=>b.cohortMedianCosts![c.key]))])) as Costs:undefined,
+    cohortMedianRepairCost:cohorts.every(b=>b.cohortMedianRepairCost!==undefined)?mean(cohorts.map(b=>b.cohortMedianRepairCost!)):undefined,
     cohortMedianTotalCosts:cohorts.every(b=>b.cohortMedianTotalCosts!==undefined)?mean(cohorts.map(b=>b.cohortMedianTotalCosts!)):undefined,
     top10MedianTotalCosts:cohorts.every(b=>b.top10MedianTotalCosts!==undefined)?mean(cohorts.map(b=>b.top10MedianTotalCosts!)):undefined,
   };
