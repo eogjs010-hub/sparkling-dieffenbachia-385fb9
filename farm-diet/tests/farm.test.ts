@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CATEGORIES, calculateNineCategories, emptyCosts, gap, median, netProfitRate, numeric, resolveBenchmark, selectTop10, simulate, standardizeTo300, type Benchmark, type CropBenchmark } from '../src/lib/farm';
+import { CATEGORIES, formatMoney, formatGapPercent, calculateNineCategories, emptyCosts, gap, median, netProfitRate, numeric, resolveBenchmark, selectTop10, simulate, standardizeTo300, type Benchmark, type CropBenchmark } from '../src/lib/farm';
 
 describe('300평 표준화', () => {
   it('1000평 비용 1000만원을 300만원으로 환산한다', () => expect(standardizeTo300(10_000_000, 1000)).toBe(3_000_000));
@@ -40,4 +40,10 @@ describe('지역 fallback',()=>{
   it('50건 이상 지역을 사용한다',()=>expect(resolveBenchmark(crop,'경상북도').fallback).toBe(false));
   it('작은 지역·없는 지역은 전국으로 전환한다',()=>{expect(resolveBenchmark(crop,'경기도')).toMatchObject({fallback:true,regionalCount:13});expect(resolveBenchmark(crop,'제주특별자치도').benchmark.region).toBe('전국');});
   it('전국도 50건 미만이면 비교를 보류한다',()=>expect(()=>resolveBenchmark({...crop,national:benchmark(49,'전국')},'전국')).toThrow());
+});
+
+it('환산 반올림의 음수 0은 금액과 비율에서 0으로 표시한다',()=>{
+ expect(formatMoney(-0.1)).toBe('0원');expect(formatMoney(-1)).toBe('-1원');
+ expect(formatGapPercent(-0.000001)).toBe('0.0%');expect(formatGapPercent(0.04)).toBe('0.0%');
+ expect(formatGapPercent(1.26)).toBe('+1.3%');expect(formatGapPercent(null)).toBe('비교 어려움');
 });

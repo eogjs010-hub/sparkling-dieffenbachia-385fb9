@@ -30,7 +30,7 @@ describe('사용자 입력과 결과 흐름',()=>{
   const quick=container.querySelector<HTMLButtonElement>('button[aria-label="해당 작목 연간 매출에 100만 원 더하기"]')!;
   await act(async()=>quick.click());
   expect(container.querySelector<HTMLInputElement>('#revenue')!.value).toBe('100');
-  expect(container.querySelector('#revenue-reading')!.textContent).toContain('만 원');
+  expect(container.querySelector('#revenue-reading')!.textContent).toContain('만원');
   const unit=container.querySelector<HTMLSelectElement>('#money-unit')!;
   await act(async()=>{unit.value='won';unit.dispatchEvent(new Event('change',{bubbles:true}));});
   expect(container.querySelector<HTMLInputElement>('#revenue')!.value).toBe('1,000,000');
@@ -102,4 +102,24 @@ describe('시뮬레이션의 동일 상태와 WebMCP 등록',()=>{
 describe('면적과 읽어주기',()=>{
  it('평/㎡ 전환을 반복해도 원본 면적을 보존한다',async()=>{function Area(){const[value,setValue]=useState('300');return <><AreaInput value={value} onChange={setValue}/><output data-testid="pyeong">{value}</output></>;}await mount(<Area/>);const select=container.querySelector<HTMLSelectElement>('#area-unit')!;await act(async()=>{select.value='m2';select.dispatchEvent(new Event('change',{bubbles:true}));});expect(Number(container.querySelector<HTMLInputElement>('#area')!.value)).toBeCloseTo(991.7355,3);await act(async()=>{select.value='pyeong';select.dispatchEvent(new Event('change',{bubbles:true}));});expect(container.querySelector<HTMLInputElement>('#area')!.value).toBe('300');expect(container.querySelector('[data-testid="pyeong"]')!.textContent).toBe('300');});
  it('읽어주기는 자동 재생하지 않고 사용자가 눌러야 시작·정지한다',async()=>{const speak=vi.fn(),cancel=vi.fn();vi.stubGlobal('speechSynthesis',{speak,cancel});vi.stubGlobal('SpeechSynthesisUtterance',class{lang='';rate=1;constructor(public text:string){}});await mount(<ReadAloud text="확인해주세요"/>);expect(speak).not.toHaveBeenCalled();await click('읽어주기');expect(speak).toHaveBeenCalledOnce();await click('정지');expect(cancel).toHaveBeenCalled();await act(async()=>root.render(<ReadAloud text="다음 질문"/>));expect(speak).toHaveBeenCalledOnce();vi.unstubAllGlobals();});
+});
+
+it('정밀 인쇄 준비는 상세 표를 열고 취소 후 원래 화면을 복원한다',async()=>{
+ await mount(<Journey mode="precision"/>);await click('예시로');await submit();
+ const details=container.querySelector<HTMLDetailsElement>('.data-details')!;
+ expect(details.open).toBe(false);
+ await act(async()=>window.dispatchEvent(new Event('beforeprint')));
+ expect(document.documentElement.classList.contains('printing-report')).toBe(true);
+ expect(details.open).toBe(true);
+ expect(container.querySelector('.kpi-grid')).toBeTruthy();
+ expect(container.querySelector('[data-testid="gap-table"]')).toBeTruthy();
+ await act(async()=>window.dispatchEvent(new Event('afterprint')));
+ expect(document.documentElement.classList.contains('printing-report')).toBe(false);
+ expect(details.open).toBe(false);
+});
+it('간편·정밀 비교 연도 설정은 같은 컴포넌트와 설명을 사용한다',async()=>{
+ await mount(<Journey mode="simple"/>);const simple=container.querySelector('.comparison-picker')!.textContent;
+ await mount(<Journey mode="precision"/>);expect(container.querySelector('.comparison-picker')!.textContent).toBe(simple);
+ expect(container.querySelectorAll('label[for="cost-seed"]')).toHaveLength(1);
+ expect(container.textContent).not.toContain('씨앗·모종에 쓴 돈');
 });

@@ -84,4 +84,10 @@ export function resolveBenchmark(crop: CropBenchmark, region: string) {
   if (!crop.national.eligible || crop.national.cohortSize < MIN_COHORT || crop.national.top10Count < 5) throw new Error('비교 가능한 표본이 부족합니다.');
   return { benchmark: crop.national, fallback: region !== '전국', regionalCount: regional?.cohortSize ?? 0 };
 }
-export const formatMoney = (value: number) => `${Math.round(value).toLocaleString('ko-KR')}원`;
+export const formatMoney = (value: number) => `${(Math.round(value)||0).toLocaleString('ko-KR')}원`;
+
+export function formatGapPercent(value:number|null){
+  if(value===null)return '비교 어려움';
+  const rounded=Number(value.toFixed(1))||0;
+  return `${rounded>0?'+':''}${rounded.toFixed(1)}%`;
+}
