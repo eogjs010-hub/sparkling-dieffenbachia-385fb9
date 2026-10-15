@@ -1,0 +1,6 @@
+import {ASSET_STANDARDS,depreciation,type MaintenanceEstimate} from '@/lib/maintenance';
+import {formatMoney} from '@/lib/farm';
+export default function MaintenanceEstimateNote({estimate,per300=false}:{estimate:MaintenanceEstimate;per300?:boolean}){
+ const factor=per300?300/estimate.scope.area:1;
+ return <section className="estimate-note"><strong>유지보수·감가상각비 · 보조 계산값</strong><p>감가상각 {formatMoney(estimate.depreciation*factor)} + 수리비 {formatMoney(estimate.repair*factor)}{estimate.repairSource==='reference'?' (조사 참고값)':' (직접 입력)'} · {per300?'300평 기준':'농장 전체 연간 금액'}</p><details><summary>추산 근거 확인</summary><ul>{estimate.assets.map(a=>{const d=depreciation(a);return <li key={a.id}>{d.label}: {formatMoney(a.price)} ÷ {d.divisor}년 × {a.sharePct}%{d.extended?' (연한 초과 계속 사용)':''}</li>;})}</ul>{estimate.reference&&<p>수리비 참고: {estimate.reference.label} {estimate.reference.region} {estimate.reference.crop} · 전체 유효 표본 {estimate.reference.cohortSize}건 · 300평당 {formatMoney(estimate.reference.costPer300)}. 실제 사용 연도: {estimate.reference.years.join(', ')}년. 실제 지출·권장 금액은 아닙니다.</p>}<p>자산 기준: 농진청 {estimate.sourceYear}년 분석방법. 잔존가액 별도 차감 없음 · 1년 전체 사용 가정 · 보조 계산에 포함한 자산 범위 기준입니다.</p><a href={ASSET_STANDARDS.source.url} target="_blank" rel="noopener noreferrer">기준 원문 보기</a></details><p className="small-note">직접 금액을 고치면 보조 계산 표시는 해제됩니다. 작목·면적·기간·지역을 바꾸면 다시 계산해야 합니다.</p></section>;
+}
