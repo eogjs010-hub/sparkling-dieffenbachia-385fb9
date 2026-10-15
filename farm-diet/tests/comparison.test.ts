@@ -4,7 +4,7 @@ import { emptyCosts, type Benchmark, type BenchmarkData } from '../src/lib/farm'
 import { YEAR_DATA } from '../src/lib/benchmarks';
 import { koreanMoney, moneyInputText, parseMoneyInput } from '../src/lib/money';
 
-const benchmark=(value:number,n=50,region='전국'):Benchmark=>({crop:'시설참외',region,cohortSize:n,top10Count:Math.ceil(n/10),top10Share:10,eligible:n>=50,medianRevenue:value*10,medianNetProfit:value*5,medianNetProfitRate:value,medianOmittedCosts:0,costs:{...emptyCosts(),energy:value},cohortMedianCosts:{...emptyCosts(),energy:value*2},cohortMedianTotalCosts:value*3,top10MedianTotalCosts:value*2});
+const benchmark=(value:number,n=50,region='전국'):Benchmark=>({crop:'시설참외',region,cohortSize:n,top10Count:Math.ceil(n/10),top10Share:10,eligible:n>=50,medianRevenue:value*10,medianNetProfit:value*5,medianNetProfitRate:value,medianOmittedCosts:0,costs:{...emptyCosts(),energy:value},cohortMedianCosts:{...emptyCosts(),energy:value*2},cohortMedianRepairCost:value*4,cohortMedianTotalCosts:value*3,top10MedianTotalCosts:value*2});
 const data=(year:number,value:number,n=50):BenchmarkData=>({year,baseAreaPyeong:300,minCohortSize:50,regions:['경상북도'],quality:{rawRows:n,validRows:n,excludedRows:0,uniqueFarmCount:n,cropCount:1,blankCostCellsVerifiedAsZero:0,exclusions:[],policy:[]},crops:[{crop:'시설참외',national:benchmark(value,n),regions:{경상북도:benchmark(value/2,n,'경상북도')}}]});
 describe('기간 비교와 실제 시계열',()=>{
  it('최근 자료 3·5·10년과 직접 선택 구간을 계산한다',()=>{expect(comparisonYears('recent3',2024)).toEqual([2022,2023,2024]);expect(comparisonYears('recent5',2024)).toHaveLength(5);expect(comparisonYears('recent10',2024)).toHaveLength(10);expect(comparisonYears('custom',2020,2018)).toEqual([2018,2019,2020]);expect(()=>comparisonYears('custom',2018,2020)).toThrow();});
@@ -25,3 +25,5 @@ describe('입력 단위와 한글 금액',()=>{
 });
 
 it('금액은 만 단위로 묶고 잔여 원을 생략하지 않는다',()=>{expect(koreanMoney(2488717)).toBe('248만 8,717원');expect(koreanMoney(100000001)).toBe('1억 1원');expect(koreanMoney(9999)).toBe('9,999원');expect(koreanMoney(9999999999999)).toBe('9조 9,999억 9,999만 9,999원');});
+
+it('수리유지비 참고값도 표본 수 가중 없이 연도별 중앙값을 평균한다',()=>{const r=resolvePeriodBenchmark([data(2023,10,50),data(2024,30,100)],'시설참외','전국',[2023,2024]);expect(r.benchmark.cohortMedianRepairCost).toBe(80);});
