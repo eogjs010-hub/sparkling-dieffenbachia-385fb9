@@ -11,11 +11,15 @@ export function parseMoneyInput(text: string, unit: MoneyUnit): string {
 export function moneyInputText(value: string, unit: MoneyUnit): string {
   return value===''?'':(Number(value)/(unit==='manwon'?10000:1)).toLocaleString('ko-KR',{maximumFractionDigits:4});
 }
-const groupText=(n:number)=>n<100?String(n):[1000,100,10,1].map((weight,i)=>{const digit=Math.floor(n/weight)%10;return digit?`${digit}${['천','백','십',''][i]}`:'';}).filter(Boolean).join(' ');
+// Group exact won amounts at Korean 10,000-unit boundaries without rounding.
 export function koreanMoney(value: number): string {
   if(!Number.isSafeInteger(value)||value<0) throw new Error('유효한 원 단위 금액이 필요합니다.');
   if(value===0)return '0원';
   let remaining=value;const parts:string[]=[];
-  for(const [amount,label] of [[1e12,'조'],[1e8,'억'],[1e4,'만'],[1,'']] as const){const n=Math.floor(remaining/amount);if(n)parts.push(`${groupText(n)}${label}`);remaining%=amount;}
-  return `${parts.join(' ')} 원`;
+  for(const [amount,label] of [[1e12,'조'],[1e8,'억'],[1e4,'만'],[1,'']] as const){
+    const n=Math.floor(remaining/amount);
+    if(n)parts.push(`${n.toLocaleString('ko-KR')}${label}`);
+    remaining%=amount;
+  }
+  return `${parts.join(' ')}원`;
 }
