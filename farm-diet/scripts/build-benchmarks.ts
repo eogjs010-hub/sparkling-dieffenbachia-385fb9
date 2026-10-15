@@ -39,7 +39,7 @@ for (const r of raw) {
   identityCounts.set(key, (identityCounts.get(key) ?? 0) + 1);
   const form = String(r.fields['조사표번호']); formCounts.set(form, (formCounts.get(form) ?? 0) + 1);
 }
-type Valid = { crop: string; region: string; farmer: string; revenue: number; net: number; rate: number; costs: Costs; omitted: number };
+type Valid = { crop: string; region: string; farmer: string; revenue: number; net: number; rate: number; costs: Costs; omitted: number; repair: number };
 const valid: Valid[] = []; const exclusions: { row: number; reason: string }[] = []; let blankCount = 0;
 for (const { row, fields } of raw) {
   try {
@@ -61,7 +61,7 @@ for (const { row, fields } of raw) {
     const residuals = [revenue - operating - income, revenue - production - net, operating - (sumCosts(costs) - costs.opportunity + omitted), production - operating - costs.opportunity];
     if (residuals.some(v => Math.abs(v) > 5)) throw new Error('회계 관계 검산 실패(허용오차 5원)');
     blankCount += mapping.flatMap(c => [...c.fields]).filter(key => numeric(fields[key]) === null).length;
-    valid.push({ crop, region, farmer, revenue, net, rate: netProfitRate(net, revenue), costs, omitted });
+    valid.push({ crop, region, farmer, revenue, net, rate: netProfitRate(net, revenue), costs, omitted, repair: numeric(fields['수리유지비_합계']) ?? 0 });
   } catch (error) { exclusions.push({ row, reason: (error as Error).message }); }
 }
 function aggregate(rows: Valid[], crop: string, region: string): Benchmark {
@@ -71,7 +71,7 @@ function aggregate(rows: Valid[], crop: string, region: string): Benchmark {
     medianRevenue: median(top.map(r => r.revenue)), medianNetProfit: median(top.map(r => r.net)), medianNetProfitRate: median(top.map(r => r.rate)), medianOmittedCosts: median(top.map(r => r.omitted)),
     costs: Object.fromEntries(CATEGORIES.map(c => [c.key, median(top.map(r => r.costs[c.key]))])) as Costs,
     cohortMedianCosts: Object.fromEntries(CATEGORIES.map(c => [c.key, median(rows.map(r => r.costs[c.key]))])) as Costs,
-    cohortMedianTotalCosts: median(rows.map(r => sumCosts(r.costs))), top10MedianTotalCosts: median(top.map(r => sumCosts(r.costs))) };
+    cohortMedianRepairCost: median(rows.map(r => r.repair)), cohortMedianTotalCosts: median(rows.map(r => sumCosts(r.costs))), top10MedianTotalCosts: median(top.map(r => sumCosts(r.costs))) };
 }
 const crops = [...new Set(valid.map(r => r.crop))]; const regions = [...new Set(raw.map(r => String(r.fields['도명'])))];
 const data: BenchmarkData & { provenance: object } = {

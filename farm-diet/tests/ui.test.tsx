@@ -123,3 +123,31 @@ it('간편·정밀 비교 연도 설정은 같은 컴포넌트와 설명을 사�
  expect(container.querySelectorAll('label[for="cost-seed"]')).toHaveLength(1);
  expect(container.textContent).not.toContain('씨앗·모종에 쓴 돈');
 });
+
+describe('유지보수 보조 계산 입력 흐름',()=>{
+ beforeEach(()=>{
+  HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};
+  HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};
+ });
+ async function dialogClick(text:string){const button=[...document.querySelectorAll<HTMLButtonElement>('dialog button')].find(b=>b.textContent?.includes(text));expect(button).toBeTruthy();await act(async()=>button!.click());}
+ it('계산 취소는 원래 금액을 보존한다',async()=>{await mount(<Journey mode="precision"/>);await click('예시로');const amount=container.querySelector<HTMLInputElement>('#cost-maintenance')!.value;await click('계산기 ·');expect(document.querySelector('dialog[open]')).toBeTruthy();await dialogClick('닫기');expect(document.querySelector('dialog')).toBeNull();expect(container.querySelector<HTMLInputElement>('#cost-maintenance')!.value).toBe(amount);});
+ it('적용은 기존 금액을 교체하며 결과·인쇄에 추산 근거를 유지한다',async()=>{
+  await mount(<Journey mode="precision"/>);await click('예시로');await click('계산기 ·');
+  const priceQuick=[...document.querySelectorAll<HTMLButtonElement>('dialog button')].find(b=>b.getAttribute('aria-label')?.includes('1,000만 원 더하기'))!;
+  for(let i=0;i<3;i++)await act(async()=>priceQuick.click());
+  await dialogClick('수리비 확인하기');
+  const repairQuick=[...document.querySelectorAll<HTMLButtonElement>('dialog button')].find(b=>b.getAttribute('aria-label')==='해당 작목 연간 수리유지비에 100만 원 더하기')!;
+  await act(async()=>repairQuick.click());await dialogClick('확인했어요');expect(document.querySelector('dialog [role="alert"]')).toBeTruthy();
+  await act(async()=>document.querySelector<HTMLInputElement>('dialog input[type="checkbox"]')!.click());await dialogClick('확인했어요');
+  expect(document.querySelector('dialog')).toBeNull();expect(Number(container.querySelector<HTMLInputElement>('#cost-maintenance')!.value.replaceAll(',',''))).toBe(400);
+  await submit();expect(container.querySelector('.estimate-note')!.textContent).toContain('보조 계산값');expect(container.querySelector('.estimate-badge')!.textContent).toBe('보조 계산');
+ });
+ it('지역 변경 시 이전 계산값과 근거를 지워 다시 계산하게 한다',async()=>{
+  await mount(<Journey mode="precision"/>);await click('예시로');await click('계산기 ·');
+  await act(async()=>[...document.querySelectorAll<HTMLButtonElement>('dialog button')].find(b=>b.getAttribute('aria-label')?.includes('1,000만 원 더하기'))!.click());await dialogClick('수리비 확인하기');
+  await act(async()=>[...document.querySelectorAll<HTMLButtonElement>('dialog button')].find(b=>b.getAttribute('aria-label')==='해당 작목 연간 수리유지비에 100만 원 더하기')!.click());
+  await act(async()=>document.querySelector<HTMLInputElement>('dialog input[type="checkbox"]')!.click());await dialogClick('확인했어요');
+  const region=container.querySelector<HTMLSelectElement>('#region')!;await act(async()=>{region.value='경상남도';region.dispatchEvent(new Event('change',{bubbles:true}));});
+  expect(container.querySelector<HTMLInputElement>('#cost-maintenance')!.value).toBe('');expect(container.querySelector('.estimate-note')).toBeNull();
+ });
+});

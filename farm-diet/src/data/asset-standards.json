@@ -1,0 +1,24 @@
+{
+  "version": "rda-2026-v1",
+  "source": {
+    "title": "2026 농산물 소득조사 분석방법",
+    "publisher": "농촌진흥청",
+    "year": 2026,
+    "checkedOn": "2026-10-15",
+    "url": "https://www.nongsaro.go.kr/portal/ps/pst/pstb/pstbc/mngmtDtaDtl.ps?nttSn=846&menuId=PS03213",
+    "pdfUrl": "https://www.nongsaro.go.kr/portal/bsFileDownload.do?atchmnflGroupEsntlCode=BS000000046318&atchmnflSn=0",
+    "methodPages": [47, 51, 52],
+    "note": "내용연수를 넘겨 계속 사용하는 자산은 현재 사용연수를 분모로 적용할 수 있음. 신조가/내용연수 방식에는 잔존가액을 별도로 차감하지 않음."
+  },
+  "installationPriceDefaults": null,
+  "repairRateDefaults": null,
+  "assets": [
+    {"id":"pipe-house","label":"파이프 비닐하우스 골조","lifeYears":10,"page":83,"note":"철골공사 기준. 비닐·보온커튼 원단은 포함하지 마세요."},
+    {"id":"glass-frame","label":"유리·PET·PC 온실 골조","lifeYears":20,"page":82,"note":"철골공사 기준. 외피복·난방기 등은 별도입니다."},
+    {"id":"hot-air","label":"온풍 난방기 (원예시설)","lifeYears":7,"page":83,"note":"일반 전기온풍기와 구분한 원예시설 난방시설 기준입니다."},
+    {"id":"boiler","label":"온수보일러 (원예시설)","lifeYears":10,"page":83,"note":"온수보일러 기준입니다."},
+    {"id":"pump","label":"양수기","lifeYears":8,"page":80,"note":"양수기 본체 기준이며 호스는 포함하지 않습니다."},
+    {"id":"tractor","label":"농업용 트랙터","lifeYears":12,"page":80,"note":"2025년도 소득자료집 반영 표. 쟁기·로터리 등 부속 기계는 별도로 나눕니다."},
+    {"id":"curtain-drive","label":"수평커튼 개폐장치","lifeYears":10,"page":83,"note":"구동장치만 해당합니다. 다겹보온커튼 원단의 수명으로 사용하지 마세요."}
+  ]
+}
